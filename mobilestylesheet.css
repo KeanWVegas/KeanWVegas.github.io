@@ -1,5 +1,5 @@
 h1  {
-    background-color:
+    font-size: 60px
 }
 table.t01 {
     border-collapse: separate;
@@ -16,9 +16,12 @@ table.t02 {
 }
 table.t03 {
     border-collapse:separate;
-    border-spacing: 70px 10px;
+    border-spacing: 60px 10px;
     background-color: skyblue;
 }
 ul {
     padding-top: 30px
+}
+h6 {
+    align-content: center
 }
