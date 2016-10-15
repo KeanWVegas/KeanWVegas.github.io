@@ -1,0 +1,24 @@
+h1  {
+    background-color:
+}
+table.t01 {
+    border-collapse: separate;
+    border-spacing: 60px 20px;
+    background-color: skyblue
+}
+body {
+    background-color: powderblue
+}
+table.t02 {
+    border-collapse: separate;
+    border-spacing: 60px 15px;
+    background-color: skyblue
+}
+table.t03 {
+    border-collapse:separate;
+    border-spacing: 150px 10px;
+    background-color: skyblue;
+}
+ul {
+    padding-top: 30px
+}
