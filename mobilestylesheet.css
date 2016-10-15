@@ -3,7 +3,7 @@ h1  {
 }
 table.t01 {
     border-collapse: separate;
-    border-spacing: 40px 20px;
+    border-spacing: 39px 20px;
     background-color: skyblue
 }
 body {
@@ -11,12 +11,12 @@ body {
 }
 table.t02 {
     border-collapse: separate;
-    border-spacing: 30px 15px;
+    border-spacing: 34px 15px;
     background-color: skyblue
 }
 table.t03 {
     border-collapse:separate;
-    border-spacing: 60px 10px;
+    border-spacing: 99px 10px;
     background-color: skyblue;
 }
 ul {
