@@ -3,16 +3,18 @@ h1  {
 }
 table.t01 {
     border-collapse: separate;
-    border-spacing: 39px 20px;
-    background-color: skyblue
+    border-spacing: 20px 20px;
+    background-color: skyblue;
+    font-size: x-large;
 }
 body {
     background-color: powderblue
 }
 table.t02 {
     border-collapse: separate;
-    border-spacing: 34px 15px;
-    background-color: skyblue
+    border-spacing: 26px 15px;
+    background-color: skyblue;
+    font-size: large
 }
 table.t03 {
     border-collapse:separate;
@@ -20,8 +22,8 @@ table.t03 {
     background-color: skyblue;
 }
 ul {
-    padding-top: 30px
+    padding-top: 30px;
 }
 h6 {
-    align-content: center
+    align-content: center;
 }
