@@ -1,0 +1,89 @@
+h1  {
+    font-size: 60px
+}
+table.t01 {
+    border-collapse: separate;
+    border-spacing: 20px 20px;
+    background-color: skyblue;
+    font-size: x-large;
+}
+body {
+    background-color: powderblue
+}
+table.t02 {
+    border-collapse: separate;
+    border-spacing: 26px 15px;
+    background-color: skyblue;
+    font-size: large
+}
+table.t03 {
+    border-collapse:separate;
+    border-spacing: 99px 10px;
+    background-color: skyblue;
+}
+ul {
+    padding-top: 30px;
+}
+h6 {
+    align-content: center;
+}
+.dropbtn {
+    background-color: lightgray;
+    color: black;
+    position: relative;
+    left: 110px;
+    top: -40px;
+    padding: 11px;
+    font-size: 16px;
+    border: solid;
+    cursor: pointer;
+    border-color: lightgray;
+    margin-top: 30px
+    
+}
+.dropbtn:hover, 
+.dropbtn:focus {
+    background-color: lightgray;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+input[type=text] {
+    background-color: lightgray;
+    position: relative;
+    left: -78px;
+    top: -25px;
+    width: 66px;
+    box-sizing: border-box;
+    border: 1px solid black;
+    border-radius: 4px;
+    padding: 10px;
+}
+.current {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+.hourly {
+    position: relative;
+    align-content: center;
+    margin-right: auto;
+    margin-left: auto;
+}
+.logo {
+   
+}
