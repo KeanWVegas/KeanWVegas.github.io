@@ -61,10 +61,10 @@ p {
     background-color: lightgray;
     color: black;
     position: relative;
-    left: 110px;
+    left: 106px;
     top: -40px;
     padding: 12px;
-    font-size: 16px;
+    font-size: 15px;
     border: solid;
     border-color: lightgray;
     cursor: pointer;
