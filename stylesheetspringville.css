@@ -1,69 +1,110 @@
-h1  {
-    font-size: 60px
+h1 {
+    font-size: 60px;
 }
+h2 {
+    font-size: 42px;
+}
+#wrapper {
+    text-align: center;
+    display: block;
+}
+
+.current-content {
+    text-align: center;
+}
+
+
+body {
+    background-color: powderblue
+}
+
 table.t01 {
     border-collapse: separate;
     border-spacing: 20px 20px;
     background-color: skyblue;
     font-size: x-large;
+    margin-left: auto;
+    margin-right: auto;
 }
-body {
-    background-color: powderblue
-}
+
 table.t02 {
     border-collapse: separate;
     border-spacing: 26px 15px;
     background-color: skyblue;
-    font-size: large
+    font-size: large;
+     margin-left: auto;
+    margin-right: auto;
 }
+
 table.t03 {
-    border-collapse:separate;
+    border-collapse: separate;
     border-spacing: 99px 10px;
     background-color: skyblue;
+    margin-left: auto;
+    margin-right: auto;
 }
+
 ul {
     padding-top: 30px;
 }
+
 h6 {
     align-content: center;
 }
+
+p {
+    font-size: 16pt;
+}
+/* Dropdown Button */
+
 .dropbtn {
     background-color: lightgray;
     color: black;
     position: relative;
-    left: 110px;
+    left: 106px;
     top: -40px;
-    padding: 11px;
-    font-size: 16px;
+    padding: 12px;
+    font-size: 15px;
     border: solid;
-    cursor: pointer;
     border-color: lightgray;
-    margin-top: 30px
-    
+    cursor: pointer;
 }
-.dropbtn:hover, 
+
+.dropbtn:hover,
 .dropbtn:focus {
     background-color: lightgray;
 }
+
 .dropdown {
-    position: relative;
-    display: inline-block;
+    position:;
+    display: block;
 }
+
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #f9f9f9;
+    background-color: lightgray;
     min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 }
+
 .dropdown-content a {
     color: black;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
 }
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1
+}
+
+.show {
+    display: block;
+}
+
 input[type=text] {
-    background-color: lightgray;
+    background-color: lig;
     position: relative;
     left: -78px;
     top: -25px;
@@ -73,17 +114,6 @@ input[type=text] {
     border-radius: 4px;
     padding: 10px;
 }
-.current {
-    position: relative;
-    margin-left: auto;
-    margin-right: auto;
-}
-.hourly {
-    position: relative;
-    align-content: center;
-    margin-right: auto;
-    margin-left: auto;
-}
-.logo {
-   
+.dropdown-menu {
+    position: relative
 }
