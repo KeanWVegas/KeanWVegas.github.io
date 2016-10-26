@@ -76,7 +76,6 @@ p {
 }
 
 .dropdown {
-    position:;
     display: block;
 }
 
@@ -104,7 +103,7 @@ p {
 }
 
 input[type=text] {
-    background-color: lig;
+    background-color: lightgray;
     position: relative;
     left: -78px;
     top: -25px;
