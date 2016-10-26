@@ -114,5 +114,12 @@ input[type=text] {
     padding: 10px;
 }
 .dropdown-menu {
-    position: relative
+    position: relative;
+}
+@media (max-width: 640px) 
+{
+    .desktop
+    {
+        display: none;
+    }
 }
