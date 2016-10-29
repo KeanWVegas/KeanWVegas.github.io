@@ -1,107 +1,53 @@
-h1 {
-    font-size: 60px;
-}
-h2 {
-    font-size: 42px;
-}
-#wrapper {
-    text-align: center;
-    display: block;
-}
-
-.current-content {
-    text-align: center;
-}
-
-
-body {
-    background-color: powderblue
-}
-
-table.t01 {
-    border-collapse: separate;
-    border-spacing: 20px 20px;
-    background-color: skyblue;
-    font-size: x-large;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-table.t02 {
-    border-collapse: separate;
-    border-spacing: 26px 15px;
-    background-color: skyblue;
-    font-size: large;
-     margin-left: auto;
-    margin-right: auto;
-}
-
-table.t03 {
-    border-collapse: separate;
-    border-spacing: 99px 10px;
-    background-color: skyblue;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-ul {
-    padding-top: 30px;
-}
-
-h6 {
-    align-content: center;
-}
-
-p {
-    font-size: 16pt;
-}
-/* Dropdown Button */
-
-.dropbtn {
-    background-color: lightgray;
-    color: black;
-    position: relative;
-    left: 106px;
-    top: -40px;
-    padding: 12px;
-    font-size: 15px;
-    border: solid;
-    border-color: lightgray;
-    cursor: pointer;
-}
-
-.dropbtn:hover,
-.dropbtn:focus {
-    background-color: lightgray;
-}
-
-.dropdown {
-    display: block;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: lightgray;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-}
-
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
-
-.dropdown-content a:hover {
-    background-color: #f1f1f1
-}
-
-.show {
-    display: block;
-}
-
+    body {
+        background-color: powderblue
+    }
+    
+    ul {
+        padding-top: 30px;
+    }
+    
+    h6 {
+        align-content: center;
+    }
+    
+    p {
+        font-size: 16pt;
+    }
+    /* Dropdown Button */
+    
+    .dropbtn:hover,
+    .dropbtn:focus {
+        background-color: lightgray;
+    }
+    
+    .dropdown {
+        display: inline-block;
+        position: relative;
+    }
+    
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: lightgray;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    }
+    
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+    
+    .dropdown-content a:hover {
+        background-color: #f1f1f1
+    }
+    
+    .show {
+        display: block;
+    }
+    /*
 input[type=text] {
     background-color: lightgray;
     position: relative;
@@ -112,14 +58,167 @@ input[type=text] {
     border: 1px solid black;
     border-radius: 4px;
     padding: 10px;
-}
-.dropdown-menu {
-    position: relative;
-}
-@media (max-width: 640px) 
-{
-    .desktop
-    {
+}*/
+    
+    div.tools {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    input[type=text] {
+        width: 9%;
+        margin: 1em;
+        box-sizing: border-box;
+        border: 1px solid #6a6a6a;
+        border-radius: 4px;
+        font-size: 15px;
+        background-color: lightgray;
+        background-position: 10px 10px;
+        background-repeat: no-repeat;
+        padding: 12px 12px 12px 40px;
+        -webkit-transition: width 0.4s ease-in-out;
+        transition: width 0.4s ease-in-out;
+        border: 3px solid #6a6a6a;
+        padding: 10px;
+        display: flex;
+    }
+    
+    #wrapper {
+        text-align: center;
+        justify-content: center;
+    }
+    
+    .logo {
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        display: inline-flex;
+        justify-content: flex-start;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 80%
+    }
+    
+    .hourly {
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 90%;
+    }
+    
+    #daily {
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        display: none;
+        justify-content: flex-start;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%
+    }
+    
+    h1 {
+        font-size: 60px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+    }
+    
+    h2 {
+        font-size: 42px;
+        text-align: center;
+        justify-content: center;
+    }
+    
+    .current-content {
+        text-align: center;
+        justify-content: center;
+    }
+    
+    .dropdown-menu {
+        justify-content: flex-start;
+    }
+    
+    .dropbtn {
+        background-color: lightgray;
+        color: black;
+        position: relative;
+        justify-content: flex-start;
+        align-content: flex-start;
+        padding: 12px;
+        font-size: 15px;
+        border: solid 4px;
+        border-color: #6A6A6A;
+        cursor: pointer;
+        display: flex;
+    }
+    
+    .thourly {
+        display: block;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    table.tdaily {
         display: none;
     }
-}
+    
+    @media and (min-width: 500px) {
+        .thourly {
+            border-collapse: separate;
+            border-spacing: 20px 20px;
+            background-color: powderblue;
+            font-size: x-large;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        table.tdaily {
+            display: none;
+        }
+        .hourly {
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            display: inline-flex;
+            justify-content: flex-start;
+            flex-direction: row;
+            flex-wrap: wrap;
+            width: 100%
+        }
+        #daily {
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            display: none;
+            justify-content: flex-start;
+            flex-direction: row;
+            flex-wrap: wrap;
+            width: 100%
+        }
+    }
+    
+    @media and (min-width: 1024px) {
+        .thourly {
+            border-collapse: separate;
+            border-spacing: 20px 20px;
+            background-color: powderblue;
+            font-size: x-large;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        table.tdaily {
+            border-collapse: separate;
+            border-spacing: 26px 15px;
+            background-color: powderblue;
+            font-size: large;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }

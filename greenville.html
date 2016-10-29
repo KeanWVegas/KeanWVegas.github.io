@@ -6,7 +6,7 @@
     <title> Greenville Weather</title>
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" type="text/css" href="stylesheetgreenville.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="Stylesheetfranklin.css" media="screen">
     <script>
         function myButton() {
             document.getElementById("myDropdown").classList.toggle("show");
@@ -31,7 +31,8 @@
     <div id="wrapper">
         <header>
             <nav>
-                <div>
+                 <img alt="logo" class='logo' src="skateparkweatherlogo.png">
+                <div class="tools">
                     <button onclick="myButton()" class="dropbtn"> Menu </button>
                     <div id="myDropdown" class="dropdown-content">
                         <a href='index.html'>Home</a>
@@ -39,7 +40,6 @@
                         <a href="greenville.html">Greenville, SC</a>
                         <a href="springville.html">Springfield, IL</a>
                     </div>
-                    <img alt="logo" class='logo' src="skateparkweatherlogo.png">
                     <input id="search" type="text" name="search" placeholder="Search..">
                 </div>
             </nav>
@@ -51,33 +51,33 @@
             <h2> High 90&deg;F / Low 66&deg;F</h2>
             <h6> Longitude: -111.803757 / Latitude: 42.011902 / ZIP: 83237</h6>
         </div>
-        <img id='hourly' alt='hourly' class='hourly' src='Hourlyforecast.png'>
-        <table class='t01'>
-            <tr>
-                <th> 8 AM</th>
-                <th> 10 AM</th>
-                <th> 12 PM</th>
-                <th> 2 PM</th>
-                <th> 4 PM</th>
-                <th> 6 PM</th>
-                <th> 8 PM</th>
-                <th> 10 PM</th>
-                <th> 12 AM</th>
-            </tr>
-            <tr>
-                <th> 74°F</th>
-                <th> 79°F</th>
-                <th> 84°F</th>
-                <th> 88°F</th>
-                <th> 90°F</th>
-                <th> 83°F</th>
-                <th> 74°F</th>
-                <th> 68°F</th>
-                <th> 67°F</th>
-            </tr>
-        </table>
+            <img id='hourly' alt='hourly' class='hourly' src='Hourlyforecast.png'>
+            <table class="t01">
+                <tr>
+                    <th> 8 AM</th>
+                    <th> 10 AM</th>
+                    <th> 12 PM</th>
+                    <th> 2 PM</th>
+                    <th> 4 PM</th>
+                    <th> 6 PM</th>
+                    <th> 8 PM</th>
+                    <th> 10 PM</th>
+                    <th> 12 AM</th>
+                </tr>
+                <tr>
+                    <th> 74°F</th>
+                    <th> 79°F</th>
+                    <th> 84°F</th>
+                    <th> 88°F</th>
+                    <th> 90°F</th>
+                    <th> 83°F</th>
+                    <th> 74°F</th>
+                    <th> 68°F</th>
+                    <th> 67°F</th>
+                </tr>
+            </table>
         <img id='daily' alt='daily' src='dailyforecast.png'>
-        <table class='t02'>
+        <table class='tdaily'>
             <tr>
                 <th> Monday</th>
                 <th> Tuesday</th>
