@@ -107,7 +107,7 @@ input[type=text] {
         justify-content: center;
         flex-direction: row;
         flex-wrap: wrap;
-        width: 30%;
+        width: 90%;
     }
     
     #daily {
@@ -120,10 +120,6 @@ input[type=text] {
         flex-wrap: wrap;
         width: 100%
     }
-    
-    .t01 {
-        text-align: center;
-}
     
     h1 {
         font-size: 60px;
