@@ -1,0 +1,53 @@
+.logo {
+    width: 300px;
+    display: flex;
+    flex-flow: row;
+}
+
+.lowerlogo {
+    width: inherit;
+    display: flex;
+    flex-flow: row-reverse;
+    font-size: 20px;
+}
+
+.navigation {
+    display: flex;
+    flex-flow: column-reverse;
+}
+
+.little {
+    border: 1px solid black;
+    border-radius: 15px;
+    width: auto;
+    height: 100px;
+    text-align: center;
+}
+
+.big {
+    border: 1px solid black;
+    border-radius: 15px;
+    width: auto;
+    height: 175px;
+    text-align: center;
+}
+
+.higher {
+    text-align: center;
+}
+
+.lower {
+    bottom: auto;
+}
+
+.navigation {
+    background-color: gray;
+    position: fixed;
+    bottom: 0px;
+    display: flex;
+    flex-flow: wrap;
+}
+
+.hourly {
+    display: none;
+}
