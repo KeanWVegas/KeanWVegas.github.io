@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en-us">
     <head>
@@ -16,23 +17,26 @@
         <nav>
             <div class="navigation">
                 <a href='index.html'>Home</a>
-                <a href="franklin.html">Franklin, ID</a>
-                <a href="greenville.html">Greenville, SC</a>
-                <a href="springfield.html">Springfield, IL</a>
+                <a href="franklin.html">Franklin</a>
+                <a href="greenville.html">Greenville</a>
+                <a href="springfield.html">Springfield</a>
                 <input class="searchbar" type="text" name="search" placeholder="Search..">
             </div>
         </nav>
     </header>
     <main class="weather">
+        <article class="city"><h2 class="higher"> Franklin, ID</h2></article>
         <section class="little">
-                    <h2 class="higher"> Franklin, ID</h2>
-                    <p class="lower"> &#9728; 17°/3°</p>
+            <article class="icon"><h5>&#9728;</h5></article>
+            <article class="currenttemp"><h5>16</h5></article>
+            <article class="temp"><p class="lower"><h5>17°/3°</h5></article>
         </section>
         <section class="big">
-            <h2> Current Conditions</h2>
-            <p>Wind:</p>
-            <p> 1-5 MPH - Southwest</p>
-            <p> Precipitation: 0 in</p>
+            <h2 class="currentcon"> Current Conditions</h2>
+            <p class="wind">Wind:</p>
+            <p class="currentwind"> 1-5 MPH Southwest</p>
+            <p class="precip"> Precipitation:</p>
+            <p class="currentprecip"> 0 in</p>
         </section>
         <section class="hourly">
             <h2> Hourly Forecast</h2>
@@ -45,7 +49,7 @@
         </section>
     </main>
     <footer>
-        &copy;2017 Kean Weithofer
+        <p>&copy;2017 Kean Weithofer</p>
     </footer>
 </body>
 </html> 
