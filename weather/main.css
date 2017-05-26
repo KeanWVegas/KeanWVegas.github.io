@@ -1,151 +1,136 @@
-@media screen and (max-width: 560px) and (min-width: 1px) {
-
 @import url('https://fonts.googleapis.com/css?family=Sansita');
 @import url('https://fonts.googleapis.com/css?family=Cabin');
-
-h1, h2 {
-    font-family: sansita, cabin, serif;
+@media screen and (max-width: 560px) and (min-width: 1px) {
+    h1,
+    h2 {
+        font-family: sansita, cabin, serif;
+    }
+    main {
+        background-image: url("images/sunny-winter.jpg");
+        background-size: cover;
+    }
+    .logo {
+        width: 300px;
+        display: flex;
+        flex-flow: row;
+        justify-content: flex-start;
+        margin-top: -10px;
+    }
+    .lowerlogo {
+        width: inherit;
+        display: flex;
+        font-size: 16px;
+        justify-content: flex-end;
+        margin-top: -20px;
+    }
+    .weather {
+        border: 1px solid black;
+        border-radius: 2px;
+        margin-top: -15px;
+    }
+    .city {
+        font-size: 12px;
+        margin: auto;
+        width: 70%;
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: -20px;
+        margin-bottom: -40px;
+        color: aliceblue;
+    }
+    .little {
+        margin: auto;
+        border: 1px solid aliceblue;
+        ;
+        border-radius: 1px;
+        width: 40%;
+        height: 80px;
+        display: flex;
+        margin-bottom: 20px;
+        margin-top: 10px;
+        flex-flow: row;
+        justify-content: center;
+    }
+    .currenttemp {
+        display: flex;
+        font-size: 25px;
+        width: 40%;
+        margin-top: 20px;
+        justify-content: center;
+        color: aliceblue;
+    }
+    .icon {
+        display: flex;
+        flex-direction: column-reverse;
+        font-size: 30px;
+        color: aliceblue;
+    }
+    .temp {
+        display: flex;
+        flex-direction: column-reverse;
+        margin-bottom: -10px;
+        color: aliceblue;
+    }
+    .searchbar {
+        width: 12%;
+        border-radius: 5px;
+        border: 1px solid black;
+        display: flex;
+        height: 13px;
+    }
+    .big {
+        display: flex;
+        margin: auto;
+        border: 1px solid black;
+        border-radius: 13px;
+        width: 95%;
+        height: 175px;
+        margin-top: -15px;
+        margin-bottom: 10px;
+        flex-flow: wrap;
+        background-color: rgba(200, 200, 200, .6);
+    }
+    .currentcon {
+        font-size: 20px;
+        width: 100%;
+        margin-top: 1px;
+        height: 30px;
+        margin-left: 5px;
+    }
+    .wind {
+        font-size: 18px;
+        width: 20%;
+        margin-top: -10px;
+        margin-left: 70px;
+    }
+    .currentwind {
+        font-size: 18px;
+        width: 40%;
+        margin-top: -10px;
+        margin-left: 20px;
+    }
+    .precip {
+        font-size: 18px;
+        margin-left: 20px;
+    }
+    .currentprecip {
+        font-size: 18px;
+        margin-left: 30px;
+    }
+    .higher {
+        display: flex;
+        justify-content: center;
+    }
 }
 
-main {
-    background-image: url("images/sunny-winter.jpg");
-    background-size: cover;
-}
-
-.logo {
-    width: 300px;
-    display: flex;
-    flex-flow: row;
-    justify-content: flex-start;
-    margin-top: -10px;
-}
-
-.lowerlogo {
-    width: inherit;
-    display: flex;
-    font-size: 16px;
-    justify-content: flex-end;
-    margin-top: -20px;
-}
-
-.weather {
-    border: 1px solid black;
-    border-radius: 2px;
-    margin-top: -15px;
-}
-
-.city {
-    font-size: 12px;
-    margin: auto;
-    width: 70%;
-    height: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: -20px;
-    margin-bottom: -40px;
-    color: aliceblue;
-}
-
-.little {
-    margin: auto;
-    border: 1px solid aliceblue;;
-    border-radius: 1px;
-    width: 40%;
-    height: 80px;
-    display: flex;
-    margin-bottom: 20px;
-    margin-top: 10px;
-    flex-flow: row;
-    justify-content: center;
-}
-
-.currenttemp {
-    display: flex;
-    font-size: 25px;
-    width: 40%;
-    margin-top: 20px;
-    justify-content: center;
-    color: aliceblue;
-}
-
-.icon {
-    display: flex;
-    flex-direction: column-reverse;
-    font-size: 30px;
-    color: aliceblue;
-}
-
-.temp {
-    display: flex;
-    flex-direction: column-reverse;
-    margin-bottom: -10px;
-    color: aliceblue;
-
-}
-.searchbar {
-    width: 12%;
-    border-radius: 5px;
-    border: 1px solid black;
-    display: flex;
-    height: 13px;
-}
-.big {
-    display: flex;
-    margin: auto;
-    border: 1px solid black;
-    border-radius: 13px;
-    width: 95%;
-    height: 175px;
-    margin-top: -15px;
-    margin-bottom: 10px;
-    flex-flow: wrap;
-    background-color: rgba(200,200,200,.6);
-}
-
-.currentcon {
-    font-size: 20px;  
-    width: 100%;
-    margin-top: 1px;
-    height: 30px;
-    margin-left: 5px;
-}
-
-.wind {
-    font-size: 18px;
-    width: 20%;
-    margin-top: -10px;
-    margin-left: 70px;
-}
-
-.currentwind {
-    font-size: 18px;
-    width: 40%;
-    margin-top: -10px;
-    margin-left: 20px;
-}
-
-.precip {
-    font-size: 18px;
-    margin-left: 20px;
-}
-
-.currentprecip {
-    font-size: 18px;
-    margin-left: 30px;
-}
-
-.higher {
-    display: flex;
-    justify-content: center;
-}
-
-}
 footer {
     border: 1px solid black;
     display: flex;
     height: 40px;
 }
+
 .navigation {
     background-color: lightgray;
     position: fixed;
@@ -162,8 +147,8 @@ footer {
     border-right: 10px;
     height: 30px;
     justify-content: center;
-    
 }
+
 .hourly {
     display: none;
 }
