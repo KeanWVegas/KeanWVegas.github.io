@@ -1,5 +1,4 @@
-
-<!doctype html>
+<!DOCTYPE HTML>
 <html lang="en-us">
     <head>
     <meta charset="UTF-8">
@@ -16,40 +15,50 @@
 
         <nav>
             <div class="navigation">
-                <a href='index.html'>Home</a>
-                <a href="franklin.html">Franklin</a>
-                <a href="greenville.html">Greenville</a>
-                <a href="springfield.html">Springfield</a>
-                <input class="searchbar" type="text" name="search" placeholder="Search..">
+                <div class="box">
+                    <a href='index.html'>Home</a>
+                    <a href="franklin.html">Franklin</a>
+                    <a href="greenville.html">Greenville</a>
+                    <a href="springfield.html">Springfield</a>
+                    <input class="searchbar" type="text" name="search" placeholder="Search..">
+                </div>
             </div>
         </nav>
     </header>
     <main class="weather">
-        <article class="city"><h2 class="higher"> Franklin, ID</h2></article>
-        <div class="little">
-            <div class="icon">&#9728;</div>
-            <div class="currenttemp">16</div>
-            <div class="temp"><p class="lower">17°/3°</div>
-        </div>
-        <section class="big">
+        <div class="big">
             <h2 class="currentcon"> Current Conditions</h2>
             <p class="wind">Wind:</p>
             <p class="currentwind"> 1-5 MPH Southwest</p>
             <p class="precip"> Precipitation:</p>
             <p class="currentprecip"> 0 in</p>
-        </section>
+        </div>
+        <div class="middle">
+            <article class="city">
+                <h2 class="higher"> Franklin, ID</h2>
+            </article>
+            <div class="little">
+                <div class="icon">&#9728;</div>
+                <div class="currenttemp">16</div>
+                <div class="temp">
+                    <p class="lower">17°/3°</div>
+            </div>
+            <div class="weathertype">
+                <h2> Sunny </h2>
+            </div>
+        </div>
         <section class="hourly">
             <h2> Hourly Forecast</h2>
-            <ul>
-                <li>6:00 AM 69°</li>
-                <li>7:00 AM 72°</li>
-                <li>8:00 AM 74°</li>
-                <li>9:00 AM 77°</li>
+            <ul class="hourlylist">
+                <li>6:00 AM : 69°</li>
+                <li>7:00 AM : 72°</li>
+                <li>8:00 AM : 74°</li>
+                <li>9:00 AM : 77°</li>
             </ul>
         </section>
     </main>
     <footer>
-        <p>&copy;2017 Kean Weithofer</p>
+        <p>&copy;2017 Kean Weithofer <a href='index.html'>Home</a></p>
     </footer>
 </body>
 </html> 
