@@ -1,5 +1,9 @@
+
+/* Fonts */ 
 @import url('https://fonts.googleapis.com/css?family=Sansita');
 @import url('https://fonts.googleapis.com/css?family=Cabin');
+
+/* Large Screen Size */ 
 @media screen and (min-width: 561px) {
     body {
         font-family: sansita, cabin, serif;
@@ -175,6 +179,7 @@
     }
 }
 
+/* Small Screen Size */
 @media screen and (max-width: 560px) {
     h1,
     h2 {
