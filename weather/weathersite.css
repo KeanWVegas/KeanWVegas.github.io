@@ -1,0 +1,42 @@
+/* Font imports */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300');
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+/* Fonts */
+
+.headlines {
+     font-family: sansita, Raleway, serif;
+}
+
+.content {
+    font-family: sansita, 'Open Sans Condensed', serif;
+    font-weight: bold;
+}
+
+
+/* Page colors */
+
+.colors {
+    display: flex;
+    justify-content: space-around;
+    flex-flow: row wrap;
+}
+.color-swatch {
+    border: 1px solid;
+    border-radius: 10px;
+    flex: 0 1 25%;
+}
+.color-swatch__color {
+    width: 100%;
+    height: 80px;
+    border-radius: 10px 10px 0 0;
+}
+.color-swatch__primary {
+    background-color: lightblue;
+}
+.color-swatch__secondary {
+    background-color: lightgray;
+}
+.color-swatch__description {
+    padding: .5em;
+}
