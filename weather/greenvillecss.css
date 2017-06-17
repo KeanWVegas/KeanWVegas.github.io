@@ -17,7 +17,7 @@
                 display: flex;
                 flex-flow: row;
                 justify-content: flex-start;
-                margin-top: -10px;
+                margin-top: 0px;
             }
             .logoholder {
                 background-color: #a6d8db;
