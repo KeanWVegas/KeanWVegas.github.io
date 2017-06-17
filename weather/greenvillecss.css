@@ -1,0 +1,218 @@
+            @import url('https://fonts.googleapis.com/css?family=Raleway');
+        @import url('https://fonts.googleapis.com/css?family=Open+Sans');
+        @media screen and (max-width: 561px) {
+            body {
+                font-family: 'Open Sans', sans-serif;
+                display: flex;
+                flex-flow: column;
+                margin: auto;
+                background-color: lightgrey;
+            }
+            h1,
+            h2 {
+                font-family: 'Raleway', sans-serif;
+            }
+            .logo {
+                width: 300px;
+                display: flex;
+                flex-flow: row;
+                justify-content: flex-start;
+                margin-top: -10px;
+            }
+            .logoholder {
+                background-color: #a6d8db;
+            }
+            .lowerlogo {
+                width: inherit;
+                display: flex;
+                font-size: 16px;
+                justify-content: flex-end;
+                margin-top: -20px;
+            }
+            .weather {
+                display: flex;
+                flex-flow: column;
+                border-radius: 2px;
+            }
+            .little {
+                display: flex;
+                margin: auto;
+                border: 1px solid black;
+                width: 70%;
+                height: 275px;
+                flex-flow: column;
+                align-items: center;
+                justify-content: center;
+            }
+            .city {
+                font-size: 12px;
+                margin: auto;
+                width: 70%;
+                height: 40px;
+                display: flex;
+                justify-content: center;
+            }
+            .currenttemp {
+                display: flex;
+                font-size: 25px;
+                width: 40%;
+                justify-content: center;
+            }
+            .weathertype {
+                display: none;
+            }
+            .searchbar {
+                display: none;
+            }
+            .navigationlarge {
+                display: none;
+            }
+            .navigationsmall {}
+            .nav {
+                width: 44px;
+            }
+            
+            /* Dropdown Button */
+            .dropbtn {
+                background-color: darkgray;
+                color: white;
+                padding: 16px;
+                font-size: 18px;
+                border: none;
+                cursor: pointer;
+                height: 40px;
+            }
+            /* Dropdown button on hover & focus */
+            .dropbtn:hover,
+            .dropbtn:focus {
+                background-color: gray;
+            }
+            /* The container <div> - needed to position the dropdown content */
+            .dropdown {
+                position: relative;
+                display: inline-block;
+            }
+            /* Dropdown Content */
+            .dropdown-content {
+                display: none;
+                position: absolute;
+                background-color: #f9f9f9;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+                z-index: 1;
+            }
+            /* Links inside the dropdown */
+            .dropdown-content a {
+                color: black;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+            }
+            /* Change color of dropdown links on hover */
+            .dropdown-content a:hover {
+                background-color: #f1f1f1
+            }
+            /* Show the dropdown menu */
+            .show {
+                display: block;
+            }
+            footer {
+                border: 1px solid black;
+                display: flex;
+                position: fixed;
+                height: 30px;
+                align-items: center;
+                bottom: 0px;
+                width: 100%;
+            }
+            .hourly {
+                display: none;
+            }
+        }
+        
+        @media screen and (min-width: 562px) {
+            body {
+                font-family: 'Open Sans', sans-serif;
+                display: flex;
+                flex-flow: column;
+                margin: auto;
+                background-color: lightgrey;
+                width: 100%;
+            }
+            a {
+                text-decoration: none;
+            }
+            h1,
+            h2 {
+                font-family: 'Raleway', sans-serif;
+            }
+            .logo {
+                width: 300px;
+                display: flex;
+                flex-flow: row;
+                justify-content: flex-start;
+                margin-top: 0px;
+            }
+            .logoholder {
+                background-color: #a6d8db;
+            }
+            .lowerlogo {
+                width: inherit;
+                display: flex;
+                font-size: 16px;
+                justify-content: flex-end;
+                margin-top: -20px;
+            }
+            .navigationsmall {
+                display: none
+            }
+            .dropdown {
+                display: none;
+            }
+            .navigationlarge {}
+            .little {
+                display: flex;
+                margin-left: 150px;
+                flex-flow: column;
+                align-items: center;
+            }
+            .hourly {
+                display: flex;
+                flex-flow: column;
+                width: 25%;
+                margin-right: 90px;
+            }
+            .box a {
+                text-decoration: none;
+                color: black;
+            }
+            .box {
+                display: flex;
+                flex-flow: column;
+                width: 33%;
+            }
+            .weather {
+                display: flex;
+                flex-direction: row;
+            }
+            footer {
+                border: 1px solid black;
+                display: flex;
+                height: 30px;
+                align-items: center;
+                bottom: 0px;
+                width: 100%;
+                position: absolute;
+            }
+            .nav {
+                width: 33%;
+                margin-top: 50px;
+                position: absolute;
+            }
+            .middle {
+                display: flex;
+                flex-flow: column;
+                width: 100%;
+                justify-content: flex-end;
+            }
+}
