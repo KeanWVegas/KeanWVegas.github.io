@@ -1,4 +1,4 @@
-            @import url('https://fonts.googleapis.com/css?family=Raleway');
+  @import url('https://fonts.googleapis.com/css?family=Raleway');
         @import url('https://fonts.googleapis.com/css?family=Open+Sans');
         @media screen and (max-width: 561px) {
             body {
@@ -17,7 +17,7 @@
                 display: flex;
                 flex-flow: row;
                 justify-content: flex-start;
-                margin-top: 0px;
+                margin-top: -10px;
             }
             .logoholder {
                 background-color: #a6d8db;
