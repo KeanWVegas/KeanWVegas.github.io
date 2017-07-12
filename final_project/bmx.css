@@ -138,11 +138,11 @@
     .footer {
         display: flex;
         width: 100%;
-        opacity: .75;
+        opacity: .55;
         background: darkgray;
     }
     .footera {
-        height: 20px;
+        height: 25px;
         text-align: center;
         opacity: .75;
         position: absolute;
