@@ -257,6 +257,9 @@
         margin: auto;
         padding: 20px;
         padding-bottom: 25px;
+        width: 50%;
+        text-indent: 50px;
+        line-height: 2em;
     }
     
     .primary p {
