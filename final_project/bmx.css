@@ -301,4 +301,23 @@
         flex-direction: row;
         bottom: 0;
     }
+    #first {
+        width: 50%;
+        text-indent: 50px;
+        width: 70%;
+        line-height: 2em;
+    }
+    #second {
+        width: 50%;
+        text-indent: 50px;
+        width: 70%;
+        line-height: 2em;
+    }
+    #third {
+        width: 50%;
+        text-indent: 50px;
+        width: 70%;
+        line-height: 2em;
+    }
+    
 }
