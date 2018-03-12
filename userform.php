@@ -12,6 +12,8 @@ if (!empty($_POST['name']) && !empty($_POST['email']) && !empty($_POST['password
     // Formats to JSON
     $jsondata = json_encode($formdata, JSON_PRETTY_PRINT);
     // Saves to JSON file
+    file_put_contents('formdata.txt', $jsondata);
+    // Outputs success
     echo 'Data successfully saved';
 } else {
     echo 'Form fields not submitted';
