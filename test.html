@@ -6,7 +6,7 @@
     <title>BMX Essentials Home | CIT 230 | KeanWVegas.github.io</title>
     <meta name="BMX Essentials" content="Page dedicated to informing users about the sport of BMX.">
     <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" type="text/css" href="bmx.css">
+    <link rel="stylesheet" type="text/css" href="final_project/bmx.css">
     <script>
         function myFunction(thiselement) {
             document.getElementById("myDropdown").classList.toggle("show");
@@ -50,11 +50,11 @@
                     <div id="myDropdown" class="dropdown-content">
                         <div class="navigationsmall">
                             <div class="box">
-                                <a href='../index.html'>Home</a>
+                                <a href='index.html'>Home</a>
                                 <a href="final_project/whatisbmx.html">What is BMX?</a>
                                 <a href="final_project/getstarted.html">Get Started</a>
                                 <a href="final_project/nearbyparks.html">Nearby Parks</a>
-                                <a href="famousriders.html">Famous Riders</a><a href="final_project/myhistory.html"> My History</a>
+                                <a href="final_project/famousriders.html">Famous Riders</a><a href="final_project/myhistory.html"> My History</a>
                             </div>
                         </div>
                     </div>
@@ -77,39 +77,36 @@
         </div>
     </header>
     <main>
-        <div class="primary">
-            <h1> Famous Riders</h1>
-        </div>
-        <div class="primary">
-            <p>In the world of competitive BMX, people have shown extreme talent for the sport, and are really well known for it. Here are a few people I know who have pioneered, enhanced or changed the sport for the better.</p>
-        </div>
-        <div class="primary">
-            <h3> Mat Hoffman</h3>
-        </div>
-        <div class="riders">
-            <img src="images/mat.jpg" alt="mat" class="img">
-        </div>
-        <div class="primary">
-            <div id="first"></div>
-        </div>
-        <div class="primary">
-            <h3> Ryan Nyquist</h3>
-        </div>
-        <div class="riders">
-            <img src="images/ryan.jpg" alt="ryan" class="img">
-        </div>
-        <div class="primary">
-            <div id="second"></div>
-        </div>
-        <div class="primary">
-            <h3> Morgan Wade</h3>
-        </div>
-        <div class="riders">
-            <img src="images/morgan.png" alt="morgan" class="img">
-        </div>
-        <div class="primary">
-            <div id="third"></div>
-        </div>
+        <form id="myform" type="post" action="userform.php" method="post">
+            <fieldset>
+                <legend>Sign Up</legend>
+                <p>Please sign up for our website here!</p>
+                <div class="elements">
+                    <label for="name">Name :</label>
+                    <input required="required" type="text" onfocus="this.value=''" value="Please enter your name here" name="name" size="25" />
+                </div>
+                <div class="elements">
+                    <label for="email">Email :</label>
+                    <input required="required" type="text" onfocus="this.value=''" value="Please enter your email here" name="email" size="25" />
+                </div>
+                <div class="elements">
+                    <label for="password">Password :</label>
+                    <input required="required" type="password" value="" name="password" size="32" minlength="6" maxlength="32" />
+                </div>
+                <div class="elements">
+                    <label for="age">Age :</label>
+                    <input required="required" type="number" value="" id="age" name="age" size="3" />
+                </div>
+                <div class="elements">
+                    <label for="gender">Gender: </label>
+                    <input type="radio" name="gender" value="Male" checked="checked" id="r1"> Male
+                    <input type="radio" name="gender" value="Female" id="r2"> Female
+                </div>
+                <div class="submit">
+                    <input type="submit" id="submit" name="submit" class="btn" value="Send" />
+                </div>
+            </fieldset>
+        </form>
 
     </main>
     <footer>
@@ -123,8 +120,6 @@
             <a href="../weather/project-proposal-page.html">Planning Page</a>
         </div>
     </footer>
-    <script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
-    <script src="/final_project/javascript/get_data.js"></script>
 </body>
 
 </html>

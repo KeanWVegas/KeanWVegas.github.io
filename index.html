@@ -6,14 +6,18 @@
     <title>BMX Essentials Home | CIT 230 | KeanWVegas.github.io</title>
     <meta name="BMX Essentials" content="Page dedicated to informing users about the sport of BMX.">
     <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" type="text/css" href="final_project/bmx.css">
+    <link rel="stylesheet" type="text/css" href="/final_project/bmx.css">
     <script>
-        function myFunction() {
+        function myFunction(thiselement) {
             document.getElementById("myDropdown").classList.toggle("show");
+            for (var i = 0; i < thiselement.children.length; i++) {
+                var child = thiselement.children[i];
+                child.classList.toggle("show");
+            }
         }
+
         window.onclick = function(event) {
             if (!event.target.matches('.dropbtn')) {
-
                 var dropdowns = document.getElementsByClassName("dropdown-content");
                 var i;
                 for (i = 0; i < dropdowns.length; i++) {
@@ -23,8 +27,13 @@
                     }
                 }
             }
+
+            function buttonFunction(x) {
+                x.classList.toggle("change");
+            }
         }
     </script>
+
 </head>
 
 <body>
@@ -32,7 +41,12 @@
         <div class="navlogo">
             <nav class="nav">
                 <div class="dropdown">
-                    <button onclick="myFunction()" class="dropbtn">≡</button>
+                    <button class="dropbtn" onclick="myFunction(this)">
+                        <div class="bar1"></div>
+                        <div class="bar2"></div>
+                        <div class="bar3"></div>
+                    
+                    </button>
                     <div id="myDropdown" class="dropdown-content">
                         <div class="navigationsmall">
                             <div class="box">
@@ -63,6 +77,10 @@
         </div>
     </header>
     <main>
+
+        <div class="primary" id="visit">
+
+        </div>
         <div class="primary">
             <h1>BMX Essentials</h1>
         </div>
@@ -73,7 +91,7 @@
             <p> Here's a quick clip of the 2014 Red Bull Dreamline, showcasing a few headlining names, including Ryan Nyquist and Morgan Wade!</p>
         </div>
         <div class="primary">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/t43CcBw1nWw"  allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/t43CcBw1nWw" allowfullscreen></iframe>
         </div>
     </main>
     <footer>
