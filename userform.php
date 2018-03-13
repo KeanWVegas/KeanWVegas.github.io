@@ -16,4 +16,5 @@ if (!empty($_POST['name']) && !empty($_POST['email']) && !empty($_POST['password
 } else {
     echo 'Form fields not submitted';
 }
-?>
+
+//http://www.kodecrash.com/javascript/read-write-json-file-using-php/
