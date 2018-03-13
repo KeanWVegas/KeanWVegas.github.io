@@ -44,9 +44,10 @@
     .dropbtn {
         background-color: darkgray;
         border: none;
-        cursor: none;
+        cursor: pointer;
         display: inline-block;
         margin-top: 9px;
+        pointer-events: none;
     }
     .show {
         display: inline-block;
