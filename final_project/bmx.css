@@ -30,6 +30,19 @@
         display: flex;
         justify-content: center;
     }
+    .counterholder {
+        background-color: lightgray;
+        height: 0px;
+        flex-direction: column-reverse;
+    }
+    .counter {
+        display: flex;
+        flex-flow: row;
+        justify-content: flex-end;
+        padding-left: 30px;
+        padding-top: 10px;
+        height: 1px;
+    }
     .searchbar {
         display: none;
     }

@@ -34,7 +34,8 @@
         }
         <!--//
         var expdate = new Date();
-        expdate.setTime(expdate.getTime() + (10 * 365 * 24 * 60 * 60));
+        expdate.setTime(expdate.getTime() + (24 * 60 * 60 * 1000 * 365)); // 1 yr from now 
+
         function setCookie(name, value, expires, path, domain, secure) {
             var thisCookie = name + "=" + escape(value) +
                 ((expires) ? "; expires=" + expires.toGMTString() : "") +
@@ -43,15 +44,18 @@
                 ((secure) ? "; secure" : "");
             document.cookie = thisCookie;
         }
+
         function showCookie() {
             alert(unescape(document.cookie));
         }
+
         function getCookieVal(offset) {
             var endstr = document.cookie.indexOf(";", offset);
             if (endstr == -1)
                 endstr = document.cookie.length;
             return unescape(document.cookie.substring(offset, endstr));
         }
+        
         function GetCookie(name) {
             var arg = name + "=";
             var alen = arg.length;
@@ -66,6 +70,7 @@
             }
             return null;
         }
+
         function DeleteCookie(name, path, domain) {
             if (GetCookie(name)) {
                 document.cookie = name + "=" +
@@ -74,7 +79,16 @@
                     "; expires=Thu, 01-Jan-70 00:00:01 GMT";
             }
         }
-        function visitCounter() {
+
+        function ChangeName() {
+            var username = GetCookie("username");
+            username = prompt("Please enter your name:", "");
+            setCookie("username", username);
+            var visits = '';
+            setCookie("counter", visits);
+            NewNamer()
+        }
+        function VisitCounter() {
             var visits = GetCookie("counter");
             if (!visits) {
                 visits = 1;
@@ -85,6 +99,7 @@
             }
             setCookie("counter", visits, expdate);
         }
+        // -->
     </script>
 
 </head>
@@ -132,7 +147,7 @@
                     <p>
                         <script type="text/javascript">
                             <!--//
-                            visitCounter()
+                            VisitCounter()
                             //-->
                         </script>
                     </p>
