@@ -65,7 +65,7 @@
     .dropbtn .bar1,
     .dropbtn .bar2,
     .dropbtn .bar3 {
-        transition: all .4s ease;
+        transition: all .4s linear;
     }
     .bar1.show {
         transform: rotate(-45deg) translate(-4px, 6px);
