@@ -209,7 +209,7 @@
             $("#btn").click(function(e) {
                 var jsonData = {};
 
-                var formData = JSON.stringify($("#Form").serializeArray());
+                var formData = JSON.stringify($("myform").serializeArray());
 
                 $.each(formData, function() {
                     if (jsonData[this.name]) {
