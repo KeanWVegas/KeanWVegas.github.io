@@ -55,7 +55,7 @@
                 endstr = document.cookie.length;
             return unescape(document.cookie.substring(offset, endstr));
         }
-        
+
         function GetCookie(name) {
             var arg = name + "=";
             var alen = arg.length;
@@ -88,6 +88,7 @@
             setCookie("counter", visits);
             NewNamer()
         }
+
         function VisitCounter() {
             var visits = GetCookie("counter");
             if (!visits) {
