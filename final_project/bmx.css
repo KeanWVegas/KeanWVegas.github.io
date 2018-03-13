@@ -47,6 +47,10 @@
         padding-top: 7px;
         height: 1px;
     }
+    .form {
+        background-color: lightgray;
+        border: none;
+    }
     .searchbar {
         display: none;
     }
@@ -58,7 +62,7 @@
         width: 44px;
     }
     .btn {
-        background-color: floralwhite;
+        background-color: white;
         border: none;
     }
     /* Dropdown Button */
@@ -261,6 +265,14 @@
         justify-content: flex-end;
         margin-top: 30px;
         height: 1px;
+    }
+    .btn {
+        background-color: white;
+        border: none;
+    }
+    .form {
+        background-color: lightgray;
+        border: none;
     }
     .navigationsmall {
         display: none

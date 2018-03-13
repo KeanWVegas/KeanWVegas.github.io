@@ -158,7 +158,7 @@
     </header>
     <main>
 
-        <form id="myform" type="post">
+        <form id="form" type="post" class="form">
             <fieldset>
                 <legend>Sign Up</legend>
                 <p>Please sign up for our website here!</p>
@@ -193,7 +193,7 @@
                 $("#btn").click(function(e) {
                     var jsonData = {};
 
-                    var formData = JSON.stringify($("#myForm").serializeArray());
+                    var formData = JSON.stringify($("#Form").serializeArray());
 
                     $.each(formData, function() {
                         if (jsonData[this.name]) {
