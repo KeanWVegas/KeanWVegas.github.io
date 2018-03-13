@@ -1,0 +1,96 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <title>BMX Essentials Home | CIT 230 | KeanWVegas.github.io</title>
+    <meta name="BMX Essentials" content="Page dedicated to informing users about the sport of BMX.">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" type="text/css" href="../final_project/bmx.css">
+    <link rel="stylesheet" type="text/css" href="biketransformcss.css">
+
+    <script>
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+        window.onclick = function(event) {
+            if (!event.target.matches('.dropbtn')) {
+
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+
+    </script>
+</head>
+
+<body>
+    <header>
+        <div class="navlogo">
+            <nav class="nav">
+                <div class="dropdown">
+                    <button onclick="myFunction()" class="dropbtn">≡</button>
+                    <div id="myDropdown" class="dropdown-content">
+                        <div class="navigationsmall">
+                            <div class="box">
+                                <a href='index.html'>Home</a>
+                                <a href="final_project/whatisbmx.html">What is BMX?</a>
+                                <a href="final_project/getstarted.html">Get Started</a>
+                                <a href="final_project/nearbyparks.html">Nearby Parks</a>
+                                <a href="final_project/famousriders.html">Famous Riders</a><a href="final_project/myhistory.html"> My History</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="navigationlarge">
+                    <div class="box">
+                        <div class="drop"><a href='index.html'>Home</a></div>
+                        <div class="drop"><a href='final_project/whatisbmx.html'>What is BMX</a></div>
+                        <div class="drop"><a href="final_project/getstarted.html">Get Started</a></div>
+                        <div class="drop"><a href="final_project/nearbyparks.html">Nearby Parks</a></div>
+                        <div class="drop"><a href="final_project/famousriders.html">Famous Riders</a></div>
+                        <div class="drop"><a href="final_project/myhistory.html">My History</a></div>
+                    </div>
+                </div>
+            </nav>
+            <div class="logoholder">
+                <h1 class="logo"> BMX Essentials</h1>
+            </div>
+        </div>
+    </header>
+    <main>
+        <p>Hover over the bike to make it move.</p>
+        <div class="bike">
+            <!-- Front Wheel -->
+            <div class="bike-wheel">
+            </div>
+
+            <div class="bike-wheel bike-wheel_back">
+                <div class="bike-wheel-center"></div>
+            </div>
+
+            <div class="bike-bar bike-toptube"></div>
+            <div class="bike-bar bike-bottomtube"></div>
+            <div class="bike-bar bike-seattube"></div>
+            <div class="bike-bar bike-seatstay"></div>
+            <div class="bike-bar bike-chainstay"></div>
+            <div class="bike-bar bike-bar_front"></div>
+            <div class="bike-bar bike-seat-tube"></div>
+            <div class="bike-bar bike-bar_handle"></div>
+            <div class="bike-bar bike-seat"></div>
+            <div class="bike-bar bike-pedal"></div>
+            <div class="bike-handlebars"></div>
+
+        </div>
+
+        </footer>
+</body>
+
+</html>

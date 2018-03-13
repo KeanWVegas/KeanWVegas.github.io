@@ -32,6 +32,7 @@
                 x.classList.toggle("change");
             }
         }
+
     </script>
 
 </head>
@@ -77,7 +78,7 @@
         </div>
     </header>
     <main>
-        <form id="myform" type="post" action="userform.php" method="post">
+        <form id="myform" type="post">
             <fieldset>
                 <legend>Sign Up</legend>
                 <p>Please sign up for our website here!</p>
@@ -86,28 +87,59 @@
                     <input required="required" type="text" onfocus="this.value=''" value="Please enter your name here" name="name" size="25" />
                 </div>
                 <div class="elements">
-                    <label for="email">Email :</label>
-                    <input required="required" type="text" onfocus="this.value=''" value="Please enter your email here" name="email" size="25" />
+                    <label for="username">Username :</label>
+                    <input required="required" type="text" onfocus="this.value=''" value="Please enter your email here" name="username" size="25" />
                 </div>
                 <div class="elements">
-                    <label for="password">Password :</label>
-                    <input required="required" type="password" value="" name="password" size="32" minlength="6" maxlength="32" />
+                    <label for="email">Email :</label>
+                    <input required="required" type="text" onfocus="this.value=''" value="Please enter your email here" name="email" size="25" />
                 </div>
                 <div class="elements">
                     <label for="age">Age :</label>
                     <input required="required" type="number" value="" id="age" name="age" size="3" />
                 </div>
                 <div class="elements">
-                    <label for="gender">Gender: </label>
+                    <label for="gender">Gender :</label>
                     <input type="radio" name="gender" value="Male" checked="checked" id="r1"> Male
                     <input type="radio" name="gender" value="Female" id="r2"> Female
                 </div>
                 <div class="submit">
-                    <input type="submit" id="submit" name="submit" class="btn" value="Send" />
+                    <input type="submit" id="btn" name="submit" class="btn" value="Send" />
                 </div>
             </fieldset>
         </form>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $("#btn").click(function(e) {
+                    var jsonData = {};
 
+                    var formData = JSON.stringify($("#myForm").serializeArray());
+
+                    $.each(formData, function() {
+                        if (jsonData[this.name]) {
+                            if (!jsonData[this.name].push) {
+                                jsonData[this.name] = [jsonData[this.name]];
+                            }
+                            jsonData[this.name].push(this.value || '');
+                        } else {
+                            jsonData[this.name] = this.value || '';
+                        }
+
+                    });
+                    console.log(jsonData);
+                    $.ajax({
+                        url: "userform.php",
+                        type: "POST",
+                        data: formData,
+                        success: function(){},
+                        dataType: "json",
+                        contentType : "application/json",
+                    });
+                    e.preventDefault();
+                });
+            });
+
+        </script>
     </main>
     <footer>
         <div class="footer">
@@ -120,6 +152,7 @@
             <a href="../weather/project-proposal-page.html">Planning Page</a>
         </div>
     </footer>
+    <script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
 </body>
 
 </html>
