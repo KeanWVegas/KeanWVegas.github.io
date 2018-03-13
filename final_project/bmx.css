@@ -47,7 +47,6 @@
         cursor: pointer;
         display: inline-block;
         margin-top: 9px;
-        pointer-events: none;
     }
     .show {
         display: inline-block;
@@ -62,6 +61,8 @@
         height: 2px;
         background-color: #333;
         margin: 6px 0;
+        pointer-events: none;
+        
     }
     .dropbtn .bar1,
     .dropbtn .bar2,
