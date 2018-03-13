@@ -6,7 +6,7 @@
         display: flex;
         flex-flow: column;
         margin: auto;
-        background-color: floralwhite;
+        background-color: rgb( 15, 15, 15);
         background-image: url(background.jpg);
         background-position: -600px -400px;
         background-repeat: no-repeat;
@@ -215,7 +215,7 @@
     body {
         font-family: 'Yanone Kaffeesatz', sans-serif;
         margin: auto;
-        background-color: floralwhite;
+        background-color: rgb( 15, 15, 15);
         max-width: 100%;
         background-image: url(background.jpg);
         background-position: 1px -200px;
@@ -389,4 +389,5 @@
         width: 70%;
         line-height: 2em;
     }
+   
 }
