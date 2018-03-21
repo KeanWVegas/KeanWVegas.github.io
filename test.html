@@ -82,7 +82,7 @@
 
         function ChangeName() {
             var username = GetCookie("username");
-            username = prompt("Please enter your name:", "");
+            username = document.getElementById('name');
             setCookie("username", username);
             var visits = '';
             setCookie("counter", visits);
@@ -100,8 +100,23 @@
             }
             setCookie("counter", visits, expdate);
         }
-        // -->
 
+        function NewNamer() {
+            var now = new Date();
+            now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+            var username = GetCookie("username");
+            if ((!username) || (username == 'null')) {
+                window.location.replace("http://keanwvegas.github.io/test.html");
+            }
+            setCookie("username", username, now);
+            if (username) {
+                document.write("Welcome, " + username +
+                    " <a href=\"cookie6.htm\" onClick=\"ChangeName();history.go(-1)\">Logout.</a> ");
+                setCookie("username", username, now);
+            } else
+                document.write("Welcome to the page, (No name given) " +
+                    "<a href=\"cookie6.htm\" onClick=\"ChangeName();history.go(-1)\">Click here </a>to add your name. ");
+        }
     </script>
 
 </head>
@@ -148,10 +163,7 @@
                 <div class="counter">
                     <p>
                         <script type="text/javascript">
-                            <!--//
-                            VisitCounter()
-                            //-->
-
+                            NewNamer()
                         </script>
                     </p>
                 </div>
@@ -165,7 +177,7 @@
                 <legend>Sign Up</legend>
                 <p>Please sign up for our website here!</p>
                 <div class="elements">
-                    <label for="name">Name :</label>
+                    <label for="name">First Name :</label>
                     <input required="required" type="text" onfocus="this.value=''" value="Please enter your name here" name="name" size="25" />
                 </div>
                 <div class="elements">
@@ -186,7 +198,7 @@
                     <input type="radio" name="gender" value="Female" id="r2"> Female
                 </div>
                 <div class="submit">
-                    <input type="submit" id="btn" name="submit" class="btn" value="Send" />
+                    <input type="submit" id="btn" name="submit" class="btn" value="Send" onClick="NewNamer()"/>
                 </div>
             </fieldset>
         </form>
@@ -200,8 +212,9 @@
             <a href="/final_project/oldindex.html">Homework Page</a>
         </div>
         <div class="footer">
-            <a href="../weather/project-proposal-page.html">Planning Page</a>
+            <script> VisitCounter() </script>
         </div>
+        
     </footer>
     <script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
     <script type="text/javascript">
@@ -234,7 +247,6 @@
                 e.preventDefault();
             });
         });
-
     </script>
 </body>
 
