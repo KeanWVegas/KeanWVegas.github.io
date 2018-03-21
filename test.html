@@ -106,7 +106,7 @@
             now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
             var username = GetCookie("username");
             if ((!username) || (username == 'null')) {
-                window.location.replace("http://keanwvegas.github.io/test.html");
+                username = prompt("Please enter your name:", "");
             }
             setCookie("username", username, now);
             if (username) {
