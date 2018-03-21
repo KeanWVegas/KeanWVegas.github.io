@@ -82,11 +82,11 @@
 
         function ChangeName() {
             var username = GetCookie("username");
-            username = document.getElementById('name');
+            username = document.getElementById('username').value;
             setCookie("username", username);
             var visits = '';
             setCookie("counter", visits);
-            NewNamer()
+            NewName()
         }
 
         function VisitCounter() {
@@ -101,21 +101,21 @@
             setCookie("counter", visits, expdate);
         }
 
-        function NewNamer() {
+        function NewName() {
             var now = new Date();
             now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
             var username = GetCookie("username");
-            if ((!username) || (username == 'null')) {
-                username = prompt("Please enter your name:", "");
-            }
+            /*if ((!username) || (username == 'null')) {
+                username = document.getElementById('name');
+                
+            } */
             setCookie("username", username, now);
             if (username) {
                 document.write("Welcome, " + username +
                     " <a href=\"cookie6.htm\" onClick=\"ChangeName();history.go(-1)\">Logout.</a> ");
                 setCookie("username", username, now);
             } else
-                document.write("Welcome to the page, (No name given) " +
-                    "<a href=\"cookie6.htm\" onClick=\"ChangeName();history.go(-1)\">Click here </a>to add your name. ");
+                document.write("<a href=\"test.html\" onClick=\"ChangeName();history.go(-1)\">Sign up</a>");
         }
     </script>
 
@@ -163,7 +163,7 @@
                 <div class="counter">
                     <p>
                         <script type="text/javascript">
-                            NewNamer()
+                            NewName()
                         </script>
                     </p>
                 </div>
@@ -198,7 +198,7 @@
                     <input type="radio" name="gender" value="Female" id="r2"> Female
                 </div>
                 <div class="submit">
-                    <input type="submit" id="btn" name="submit" class="btn" value="Send" onClick="NewNamer()"/>
+                    <input type="submit" id="btn" name="submit" class="btn" value="Send" onClick="ChangeName()"/>
                 </div>
             </fieldset>
         </form>
