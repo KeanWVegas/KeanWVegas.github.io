@@ -80,15 +80,6 @@
             }
         }
 
-        function ChangeName() {
-            var username = GetCookie("username");
-            username = document.getElementById('username').value;
-            setCookie("username", username);
-            var visits = '';
-            setCookie("counter", visits);
-            NewName()
-        }
-
         function VisitCounter() {
             var visits = GetCookie("counter");
             if (!visits) {
@@ -105,6 +96,9 @@
             var now = new Date();
             now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
             var username = GetCookie("username");
+            if ((!username) || (username == 'null')) {
+                username = prompt("Please enter your name:", "");
+            }
             /*if ((!username) || (username == 'null')) {
                 username = document.getElementById('name');
                 
@@ -112,10 +106,20 @@
             setCookie("username", username, now);
             if (username) {
                 document.write("Welcome, " + username +
-                    " <a href=\"cookie6.htm\" onClick=\"ChangeName();history.go(-1)\">Logout.</a> ");
+                    " <a href=\"cookie6.htm\" onClick=\"ChangeName();history.go(-1)\">Logout</a> ");
                 setCookie("username", username, now);
             } else
                 document.write("<a href=\"test.html\" onClick=\"ChangeName();history.go(-1)\">Sign up</a>");
+        }
+
+        function ChangeName() {
+            var username = GetCookie("username");
+            username = prompt("Please enter your name:", "");
+            //username = document.getElementById('name').value;
+            setCookie("username", username);
+            var visits = '';
+            setCookie("counter", visits);
+            NewName()
         }
     </script>
 
@@ -198,7 +202,7 @@
                     <input type="radio" name="gender" value="Female" id="r2"> Female
                 </div>
                 <div class="submit">
-                    <input type="submit" id="btn" name="submit" class="btn" value="Send" onClick="ChangeName()"/>
+                    <input type="submit" id="btn" name="submit" class="btn" value="Send" onClick="ChangeName()" />
                 </div>
             </fieldset>
         </form>
@@ -212,9 +216,11 @@
             <a href="/final_project/oldindex.html">Homework Page</a>
         </div>
         <div class="footer">
-            <script> VisitCounter() </script>
+            <script>
+                VisitCounter()
+            </script>
         </div>
-        
+
     </footer>
     <script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
     <script type="text/javascript">
