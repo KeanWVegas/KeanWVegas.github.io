@@ -157,7 +157,6 @@
         width: 70%;
         line-height: 2em;
     }
-    
     .riders {
         background: white;
         opacity: .9;
@@ -261,12 +260,11 @@
         height: 29px;
     }
     .logoholder {
-        background-color: lightgray;
+        background-color: darkgray;
         height: 60px;
         flex-direction: column-reverse;
     }
     .counterholder {
-        background-color: lightgray;
         height: 0px;
         flex-direction: column-reverse;
     }
@@ -275,7 +273,7 @@
         display: flex;
         flex-flow: row;
         justify-content: flex-end;
-        margin-top: 30px;
+        margin-top: 25px;
         height: 1px;
     }
     .btn {
@@ -293,6 +291,9 @@
         display: none;
     }
     .navigationlarge {}
+    .navbutton:hover {
+        background-color: lightgray;
+    }
     .box a {
         text-decoration: none;
         color: black;
@@ -306,7 +307,7 @@
         text-align: center;
         display: flex;
         font-family: sansita, cabin, serif;
-        background-color: lightgray;
+        background-color: darkgray;
         font-size: 17px;
         border: 1px solid darkslategray;
         border-radius: 1px;
@@ -342,19 +343,72 @@
         width: 70%;
         line-height: 2em;
     }
-    .riders {
-        background: white;
-        opacity: .95;
-        width: 50%;
+    /* BEGIN SLIDESHOW */
+    * {box-sizing:border-box}
+    .slider {
+        max-width: 530px;
+        position: relative;
         margin: auto;
-        display: flex;
-        justify-content: center;
-        padding: 20px;
     }
-    .img {
-        max-width: 400px;
-        max-height: 400px;
+    .mySlides {
+        display: none;
     }
+    .prev, .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        margin-left: 6px;
+        margin-top: -28px;
+        padding: 1px;
+        color: white;
+        width: 50px;
+        font-weight: bold;
+        font-size: 50px;
+        transition: 0.4s ease;
+        border-radius: 0 3px 3px 0;
+    }
+    .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+    }
+    .prev:hover,
+    .next:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+    .slidetext {
+        background-color: darkgray;
+        color: black;
+        font-size: 15px;
+        padding: 8px 12px;
+        position: absolute;
+        bottom: 0px;
+        width: 100%;
+        text-align: center;
+    }
+    .fade {
+        -webkit-animation-name: fade;
+        -webkit-animation-duration: 1.5s;
+        animation-name: fade;
+        animation-duration: 1.5s;
+    }
+    @-webkit-keyframes fade {
+        from {
+            opacity: .4
+        }
+        to {
+            opacity: 1
+        }
+    }
+    @keyframes fade {
+        from {
+            opacity: .4
+        }
+        to {
+            opacity: 1
+        }
+    }
+    /* END SLIDESHOW */
+    
     .map {
         opacity: .95;
         display: flex;
