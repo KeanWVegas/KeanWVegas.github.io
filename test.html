@@ -1,3 +1,14 @@
+
+<?php
+if(isset($_POST['submit'])) {
+	$file = "data.json";
+	$json_string = json_encode($_POST, JSON_PRETTY_PRINT);
+	file_put_contents($file, $json_string, FILE_APPEND);
+	header('Location: thanks.php'); 
+}
+?>
+
+
 <!DOCTYPE HTML>
 <html lang="en-us">
 
@@ -180,29 +191,29 @@
             <fieldset>
                 <legend>Sign Up</legend>
                 <p>Please sign up for our website here!</p>
-                <div class="elements">
-                    <label for="name">First Name :</label>
-                    <input required="required" type="text" onfocus="this.value=''" value="Please enter your name here" name="name" size="25" />
+                <div class="inputBox fade">
+                    <label for="name"></label>
+                    <input required="required" type="text" onfocus="this.value=''" value="First name" name="name" size="25" />
                 </div>
-                <div class="elements">
-                    <label for="username">Username :</label>
+                <div class="inputBox">
+                    <label for="username"></label>
                     <input required="required" type="text" onfocus="this.value=''" value="Please enter your email here" name="username" size="25" />
                 </div>
-                <div class="elements">
-                    <label for="email">Email :</label>
+                <div class="inputBox">
+                    <label for="email"></label>
                     <input required="required" type="text" onfocus="this.value=''" value="Please enter your email here" name="email" size="25" />
                 </div>
-                <div class="elements">
+                <div class="ageBox">
                     <label for="age">Age :</label>
                     <input required="required" type="number" value="" id="age" name="age" size="3" />
                 </div>
-                <div class="elements">
+                <div class="genderBox">
                     <label for="gender">Gender :</label>
                     <input type="radio" name="gender" value="Male" checked="checked" id="r1"> Male
                     <input type="radio" name="gender" value="Female" id="r2"> Female
                 </div>
                 <div class="submit">
-                    <input type="submit" id="btn" name="submit" class="btn" value="Send" onClick="ChangeName()" />
+                    <input type="submit" name="submit" id="submit" value="Submit" />
                 </div>
             </fieldset>
         </form>

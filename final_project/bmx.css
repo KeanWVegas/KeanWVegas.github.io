@@ -49,8 +49,9 @@
         height: 1px;
     }
     .form {
-        background-color: lightgray;
+        background-color: whitesmoke;
         border: none;
+        opacity: .92;
     }
     .searchbar {
         display: none;
@@ -150,7 +151,6 @@
         width: 90%;
         background: white;
         margin: auto;
-        
     }
     .primary h1 {
         text-align: center;
@@ -176,8 +176,10 @@
         max-width: 200px;
         max-height: 200px;
     }
-     /* BEGIN SLIDESHOW */
-    * {box-sizing:border-box}
+    /* BEGIN SLIDESHOW */
+    * {
+        box-sizing: border-box
+    }
     .slider {
         max-width: 530px;
         position: relative;
@@ -186,7 +188,8 @@
     .slides {
         display: none;
     }
-    .prev, .next {
+    .prev,
+    .next {
         cursor: pointer;
         position: absolute;
         top: 50%;
@@ -242,6 +245,13 @@
         }
     }
     /* END SLIDESHOW */
+    .inputBox {
+        padding-bottom: 20px;
+    }
+    .ageBox:focus {
+        
+    }
+    .genderBox {}
     .map {
         display: flex;
         justify-content: center;
@@ -354,7 +364,7 @@
         border: none;
     }
     .form {
-        background-color: lightgray;
+        background-color: whitesmoke;
         border: none;
     }
     .navigationsmall {
@@ -417,7 +427,9 @@
         line-height: 2em;
     }
     /* BEGIN SLIDESHOW */
-    * {box-sizing:border-box}
+    * {
+        box-sizing: border-box
+    }
     .slider {
         max-width: 530px;
         position: relative;
@@ -426,7 +438,8 @@
     .slides {
         display: none;
     }
-    .prev, .next {
+    .prev,
+    .next {
         cursor: pointer;
         position: absolute;
         top: 50%;
@@ -481,7 +494,6 @@
         }
     }
     /* END SLIDESHOW */
-    
     .map {
         opacity: .95;
         display: flex;
