@@ -20,18 +20,18 @@
         display: flex;
         width: 100%;
         background-color: whitesmoke;
-         opacity: .95;
     }
     .logoholder {
         display: flex;
         justify-content: center;
+        width: 100%;
     }
     .logo {
         margin-top: 0px;
         margin: 5px;
         padding-left: 0px;
         font-size: 20px;
-        width: 32vw;
+        width: 100%;
         padding-top: 8px;
     }
     .counterholder {
@@ -142,74 +142,6 @@
     main {
         height: 100%;
     }
-    /* BEGIN SLIDESHOW */
-    * {box-sizing:border-box}
-    .slider {
-        max-width: 530px;
-        position: relative;
-        margin: auto;
-    }
-    .slides {
-        display: none;
-    }
-    .prev, .next {
-        cursor: pointer;
-        position: absolute;
-        top: 50%;
-        margin-left: 6px;
-        margin-top: -28px;
-        padding: 1px;
-        color: white;
-        width: 50px;
-        font-weight: bold;
-        font-size: 50px;
-        transition: 0.4s ease;
-        border-radius: 0 3px 3px 0;
-        
-    }
-    .next {
-        right: 0;
-        border-radius: 3px 0 0 3px;
-    }
-    .prev:hover,
-    .next:hover {
-        background-color: darkgray;
-        
-    }
-    .slidetext {
-        background-color: whitesmoke;
-        color: black;
-        font-size: 15px;
-        padding: 8px 12px;
-        position: absolute;
-        bottom: 0px;
-        width: 100%;
-        text-align: center;
-        opacity: .92;
-    }
-    .fade {
-        -webkit-animation-name: fade;
-        -webkit-animation-duration: 1.5s;
-        animation-name: fade;
-        animation-duration: 1.5s;
-    }
-    @-webkit-keyframes fade {
-        from {
-            opacity: .4
-        }
-        to {
-            opacity: 1
-        }
-    }
-    @keyframes fade {
-        from {
-            opacity: .4
-        }
-        to {
-            opacity: 1
-        }
-    }
-    /* END SLIDESHOW */
     .primary {
         opacity: .95;
         display: flex;
@@ -218,12 +150,17 @@
         width: 80%;
         background: white;
         margin: auto;
-        padding: 20px;
-        padding-bottom: 25px;
+        
+    }
+    .primary h1 {
+        text-align: center;
+    }
+    .primary h2 {
+        text-align: center;
     }
     .primary p {
-        text-indent: 50px;
-        width: 70%;
+        text-align: center;
+        width: 90%;
         line-height: 2em;
     }
     .riders {
