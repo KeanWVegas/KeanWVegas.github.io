@@ -110,9 +110,9 @@ if(isset($_POST['submit'])) {
                     username = prompt("Please enter your name:", "");
                 }
                 /*if ((!username) || (username == 'null')) {
-                    username = document.getElementById('name');
-                    
+                    username = document.getElementById('name');   
                 } */
+                
                 setCookie("username", username, now);
                 if (username) {
                     document.write("Welcome, " + username +
