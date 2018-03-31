@@ -117,7 +117,7 @@ if(isset($_POST['submit'])) {
             setCookie("username", username, now);
             if (username) {
                 document.write("Welcome, " + username +
-                    " <a href=\"cookie6.htm\" onClick=\"ChangeName();history.go(-1)\">Logout</a> ");
+                    " <a onClick=\"ChangeName();history.go(-1)\">Logout</a> ");
                 setCookie("username", username, now);
             } else
                 document.write("<a href=\"test.html\" onClick=\"ChangeName();history.go(-1)\">Sign up</a>");
