@@ -218,14 +218,14 @@ if(isset($_POST['submit'])) {
         </form>
 
 
-        <p id="demo"></p>
+        <p id="names"></p>
 
         <script>
             var xmlhttp = new XMLHttpRequest();
             xmlhttp.onreadystatechange = function() {
                 if (this.readyState == 4 && this.status == 200) {
                     var myObj = JSON.parse(this.responseText);
-                    document.getElementById("demo").innerHTML = myObj.name;
+                    document.getElementById("names").innerHTML = myObj.name;
                 }
             };
             xmlhttp.open("GET", "data.json", true);
