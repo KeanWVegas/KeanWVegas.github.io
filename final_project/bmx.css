@@ -246,12 +246,29 @@
     }
     /* END SLIDESHOW */
     .inputBox {
-        padding-bottom: 20px;
+    width: 130px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 15px;
+    background-color: white;
+    padding: 12px 20px 15px 10px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+        margin-bottom: 10px;
     }
-    .ageBox:focus {
-        
+    .inputBox:focus {
+        width: 95%;
     }
-    .genderBox {}
+    .submit {
+        width: 130px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 15px;
+    background-color: white;
+    padding: 12px 20px 15px 10px;
+    }
     .map {
         display: flex;
         justify-content: center;

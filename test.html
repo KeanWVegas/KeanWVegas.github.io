@@ -190,29 +190,25 @@ if(isset($_POST['submit'])) {
             <fieldset>
                 <legend>Sign Up</legend>
                 <p>Please sign up for our website here!</p>
-                <div class="inputBox fade">
-                    <label for="name"></label>
-                    <input required="required" type="text" onfocus="this.value=''" value="First name" name="name" size="25" />
+                <div>
+                    <input required="required" type="text" placeholder="First name" name="name" size="25" class="inputBox"/>
                 </div>
-                <div class="inputBox">
-                    <label for="username"></label>
-                    <input required="required" type="text" onfocus="this.value=''" value="Please enter your email here" name="username" size="25" />
+                <div>
+                    <input required="required" type="text"  placeholder="Username" name="username" size="25" class="inputBox"/>
                 </div>
-                <div class="inputBox">
-                    <label for="email"></label>
-                    <input required="required" type="text" onfocus="this.value=''" value="Please enter your email here" name="email" size="25" />
+                <div>
+                    <input required="required" type="text" placeholder="Email Address" name="email" size="25" class="inputBox" />
                 </div>
-                <div class="ageBox">
-                    <label for="age">Age :</label>
-                    <input required="required" type="number" value="" id="age" name="age" size="3" />
+                <div>
+                    <input required="required" type="number" value="" id="age" name="age" size="3" placeholder="Age" class="inputBox"/>
                 </div>
                 <div class="genderBox">
                     <label for="gender">Gender :</label>
                     <input type="radio" name="gender" value="Male" checked="checked" id="r1"> Male
                     <input type="radio" name="gender" value="Female" id="r2"> Female
                 </div>
-                <div class="submit">
-                    <input type="submit" name="submit" id="submit" value="Submit" />
+                <div>
+                    <input type="submit" name="submit" id="submit" value="Submit" class="submit" />
                 </div>
             </fieldset>
         </form>
