@@ -1,0 +1,119 @@
+<!DOCTYPE HTML>
+
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <title>BMX Essentials Home | CIT 230 | KeanWVegas.github.io</title>
+    <meta name="BMX Essentials" content="Page dedicated to informing users about the sport of BMX.">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" type="text/css" href="final_project/bmx.css">
+    <script>
+        function myFunction(thiselement) {
+            document.getElementById("myDropdown").classList.toggle("show");
+            for (var i = 0; i < thiselement.children.length; i++) {
+                var child = thiselement.children[i];
+                child.classList.toggle("show");
+            }
+        }
+
+        window.onclick = function(event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+
+            function buttonFunction(x) {
+                x.classList.toggle("change");
+            }
+        }
+    </script>
+</head>
+
+    <body>
+        <header>
+            <div class="navlogo">
+                <nav class="nav">
+                    <div class="dropdown">
+                        <button class="dropbtn" onclick="myFunction(this)">
+                        <div class="bar1"></div>
+                        <div class="bar2"></div>
+                        <div class="bar3"></div>
+                    
+                    </button>
+                        <div id="myDropdown" class="dropdown-content">
+                            <div class="navigationsmall">
+                                <div class="box">
+                                    <a href='index.html'>Home</a>
+                                    <a href="final_project/whatisbmx.html">What is BMX?</a>
+                                    <a href="final_project/getstarted.html">Get Started</a>
+                                    <a href="final_project/nearbyparks.html">Nearby Parks</a>
+                                    <a href="final_project/famousriders.html">Famous Riders</a><a href="final_project/myhistory.html"> My History</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="navigationlarge">
+                        <div class="box">
+                            <div class="drop"><a href='index.html'>Home</a></div>
+                            <div class="drop"><a href='final_project/whatisbmx.html'>What is BMX</a></div>
+                            <div class="drop"><a href="final_project/getstarted.html">Get Started</a></div>
+                            <div class="drop"><a href="final_project/nearbyparks.html">Nearby Parks</a></div>
+                            <div class="drop"><a href="final_project/famousriders.html">Famous Riders</a></div>
+                            <div class="drop"><a href="final_project/myhistory.html">My History</a></div>
+                        </div>
+                    </div>
+                </nav>
+                <div class="logoholder">
+                    <h1 class="logo"> BMX Essentials</h1>
+                </div>
+            </div>
+        </header>
+        <main>
+
+
+        <body>
+                <div class="container text-center" id="error">
+                    <svg height="100" width="100">
+    <polygon points="50,25 17,80 82,80" stroke-linejoin="round" style="fill:none;stroke:#ff8a00;stroke-width:8" />
+    <text x="42" y="74" fill="#ff8a00" font-family="sans-serif" font-weight="900" font-size="42px">!</text>
+  </svg>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="main-icon text-warning"><span class="uxicon uxicon-alert"></span></div>
+                            <h1>Page not found (404 error)</h1>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 col-md-push-3">
+                            <p class="lead">Oops! This page doesn't exist. If you think it should, please email me with ideas at keanwvegas@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+
+            </body>
+
+
+            <p id="names"></p>
+
+
+
+        </main>
+        <footer>
+            <div class="footer">
+                <a>&copy;2017 Kean Weithofer</a>
+            </div>
+
+        </footer>
+
+
+    </body>
+
+</html>

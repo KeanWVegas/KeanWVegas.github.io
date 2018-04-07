@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE HTML>
 <html lang="en-us">
 
@@ -6,7 +8,7 @@
     <title>BMX Essentials Home | CIT 230 | KeanWVegas.github.io</title>
     <meta name="BMX Essentials" content="Page dedicated to informing users about the sport of BMX.">
     <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" type="text/css" href="bmx.css">
+    <link rel="stylesheet" type="text/css" href="final_project/bmx.css">
     <script>
         function myFunction(thiselement) {
             document.getElementById("myDropdown").classList.toggle("show");
@@ -97,42 +99,32 @@
             now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
             var username = GetCookie("username");
 
-            /* if ((!username) || (username == 'null')) {
-                 username = prompt("Please enter your name:", "");
-             }
-             /*if ((!username) || (username == 'null')) {
-                 username = document.getElementById('name');   
-             } */
+           /* if ((!username) || (username == 'null')) {
+                username = prompt("Please enter your name:", "");
+            }
+            /*if ((!username) || (username == 'null')) {
+                username = document.getElementById('name');   
+            } */
 
             setCookie("username", username, now);
 
-            if (username != "undefined") {
+           if (username != "undefined") {
                 document.write("" + username +
                     " <a href=\"test.php\" onClick=\"ChangeName();history.go(-1)\">Logout</a> ");
                 setCookie("username", username, now);
             } else {
                 document.write("<a href=\"test.php\" onClick=\"ChangeName();history.go(-1)\">Sign up</a>");
             }
-
+                
         }
 
-        function ChangeName(username) {
+      function ChangeName(username) {
             //username = document.getElementById('name').value;
             setCookie("username", username);
             var visits = '';
             setCookie("counter", visits);
         }
         
-        var xmlhttp = new XMLHttpRequest();
-                xmlhttp.onreadystatechange = function() {
-                    if (this.readyState == 4 && this.status == 200) {
-                        var myObj = JSON.parse(this.responseText);
-                        document.getElementById("names").innerHTML = myObj.name;
-                    }
-                };
-                xmlhttp.open("GET", "data.json", true);
-                xmlhttp.send();
-
     </script>
 
 </head>
@@ -146,85 +138,119 @@
 ?>
     <script type="text/javascript">
         ChangeName(<?php echo("'".$_GET['name']."'") ?>);
-
     </script>
-    <?php } ?>
-
-    </head>
-
-    <body>
-        <header>
-            <div class="navlogo">
-                <nav class="nav">
-                    <div class="dropdown">
-                        <button class="dropbtn" onclick="myFunction(this)">
+<?php } ?>
+<body>
+    <header>
+        <div class="navlogo">
+            <nav class="nav">
+                <div class="dropdown">
+                    <button class="dropbtn" onclick="myFunction(this)">
                         <div class="bar1"></div>
                         <div class="bar2"></div>
                         <div class="bar3"></div>
                     
                     </button>
-                        <div id="myDropdown" class="dropdown-content">
-                            <div class="navigationsmall">
-                                <div class="box">
-                                    <a href='index.php' class="navbutton">Home</a>
-                                    <a href="final_project/whatisbmx.php" class="navbutton">What is BMX?</a>
-                                    <a href="final_project/getstarted.php" class="navbutton">Get Started</a>
-                                    <a href="final_project/nearbyparks.php" class="navbutton">Nearby Parks</a>
-                                    <a href="final_project/famousriders.php" class="navbutton">Famous Riders</a>
-                                    <a href="final_project/myhistory.php" class="navbutton"> My History</a>
-                                </div>
+                    <div id="myDropdown" class="dropdown-content">
+                        <div class="navigationsmall">
+                            <div class="box">
+                                <a href='index.html'>Home</a>
+                                <a href="final_project/whatisbmx.html">What is BMX?</a>
+                                <a href="final_project/getstarted.html">Get Started</a>
+                                <a href="final_project/nearbyparks.html">Nearby Parks</a>
+                                <a href="final_project/famousriders.html">Famous Riders</a><a href="final_project/myhistory.html"> My History</a>
                             </div>
                         </div>
                     </div>
-
-                    <div class="navigationlarge">
-                        <div class="box">
-                            <div class="drop"><a href='index.php' class="navbutton">Home</a></div>
-                            <div class="drop"><a href='final_project/whatisbmx.php' class="navbutton">What is BMX</a></div>
-                            <div class="drop"><a href="final_project/getstarted.php" class="navbutton">Get Started</a></div>
-                            <div class="drop"><a href="final_project/nearbyparks.php" class="navbutton">Nearby Parks</a></div>
-                            <div class="drop"><a href="final_project/famousriders.php" class="navbutton">Famous Riders</a></div>
-                            <div class="drop"><a href="final_project/myhistory.php" class="navbutton">My History</a></div>
-                        </div>
-                    </div>
-                </nav>
-                <div class="logoholder">
-                    <h1 class="logo"> BMX Essentials</h1>
                 </div>
-                <div class="counterholder">
-                    <div class="counter">
-                        <p>
-                            <script type="text/javascript">
-                                NewName()
 
-                            </script>
-                        </p>
+                <div class="navigationlarge">
+                    <div class="box">
+                        <div class="drop"><a href='index.html'>Home</a></div>
+                        <div class="drop"><a href='final_project/whatisbmx.html'>What is BMX</a></div>
+                        <div class="drop"><a href="final_project/getstarted.html">Get Started</a></div>
+                        <div class="drop"><a href="final_project/nearbyparks.html">Nearby Parks</a></div>
+                        <div class="drop"><a href="final_project/famousriders.html">Famous Riders</a></div>
+                        <div class="drop"><a href="final_project/myhistory.html">My History</a></div>
                     </div>
                 </div>
+            </nav>
+            <div class="logoholder">
+                <h1 class="logo"> BMX Essentials</h1>
             </div>
-        </header>
-        <main>
-            <div class="primary">
-                <h1> What is BMX?</h1>
+            <div class="counterholder">
+                <div class="counter">
+                    <p>
+                        <script type="text/javascript">
+                            NewName()
+                        </script>
+                    </p>
+                </div>
             </div>
-            <div class="primary">
-                <p class="grow">BMX is an abbreviation for bicycle motocross, and is a sport performed on BMX bikes, which are generally smaller in size to allow for quick, jerking movements on dirt courses, skateparks, or street settings. It began when young riders created dirt courses to perform tricks on. BMX began in the early 70's when children would ride their bikes on dirt courses, immitating the similar motorsport 'motocross.' Eventually manufacturers began creating smaller, lighter and more maneuverable bikes than the average road bike.</p>
-            </div>
-            <div class="primary">
-                <p class="grow"> Freestyle BMX is now one of the main events at the annual Summer X Games competition. The popularity of the sport has increased due to its relative ease and availability of places to ride due to the growing amount of skateparks in the nation. There are other events, not including the X Games, such as the Mountain Dew Tour and Etnies Backyard Jam.</p>
-            </div>
-        </main>
-        <footer>
-            <div class="footer">
-                <a>&copy;2017 Kean Weithofer</a>
-            </div>
-            <div class="footer">
-                <a href="/final_project/oldindex.html">Homework Page</a>
-            </div>
-            <div class="footer">
-                <a href="../weather/project-proposal-page.html">Planning Page</a>
-            </div>
-        </footer>
-    </body>
+        </div>
+    </header>
+    <main>
 
-</html>
+        <form id="myform" type="post" class="form">
+            <fieldset>
+                <legend>Sign Up</legend>
+                <p>Please sign up for our website here!</p>
+                <div>
+                    <input required="required" type="text" placeholder="First name" name="name" size="25" class="inputBox" />
+                </div>
+                <div>
+                    <input required="required" type="text" placeholder="Username" name="username" size="25" class="inputBox" />
+                </div>
+                <div>
+                    <input required="required" type="text" placeholder="Email Address" name="email" size="25" class="inputBox" />
+                </div>
+                <div>
+                    <input required="required" type="number" value="" id="age" name="age" size="3" placeholder="Age" class="inputBox" min="1" max="99"/>
+                </div>
+                <div class="genderBox">
+                    <label for="gender">Gender :</label>
+                    <input type="radio" name="gender" value="Male" checked="checked" id="r1"> Male
+                    <input type="radio" name="gender" value="Female" id="r2"> Female
+                </div>
+                <div>
+                    <input type="submit" name="submit" id="submit" value="Submit" class="submit" />
+                </div>
+            </fieldset>
+        </form>
+
+
+        <p id="names"></p>
+
+        <script>
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    var myObj = JSON.parse(this.responseText);
+                    document.getElementById("names").innerHTML = myObj.name;
+                }
+            };
+            xmlhttp.open("GET", "data.json", true);
+            xmlhttp.send();
+        </script>
+
+
+    </main>
+    <footer>
+        <div class="footer">
+            <a>&copy;2017 Kean Weithofer</a>
+        </div>
+        <div class="footer">
+            <a href="/final_project/oldindex.html">Homework Page</a>
+        </div>
+        <div class="footer">
+            <script>
+                VisitCounter()
+            </script>
+        </div>
+
+    </footer>
+
+
+</body>
+
+    </html>

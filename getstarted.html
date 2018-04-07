@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE HTML>
 <html lang="en-us">
 
@@ -8,8 +6,8 @@
     <title>BMX Essentials Home | CIT 230 | KeanWVegas.github.io</title>
     <meta name="BMX Essentials" content="Page dedicated to informing users about the sport of BMX.">
     <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" type="text/css" href="final_project/bmx.css">
-    <script>
+    <link rel="stylesheet" type="text/css" href="bmx.css">
+   <script>
         function myFunction(thiselement) {
             document.getElementById("myDropdown").classList.toggle("show");
             for (var i = 0; i < thiselement.children.length; i++) {
@@ -98,48 +96,35 @@
             var now = new Date();
             now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
             var username = GetCookie("username");
-
-           /* if ((!username) || (username == 'null')) {
+            if ((!username) || (username == 'null')) {
                 username = prompt("Please enter your name:", "");
             }
             /*if ((!username) || (username == 'null')) {
-                username = document.getElementById('name');   
-            } */
-
-            setCookie("username", username, now);
-
-           if (username && username != "undefined") {
-                document.write("" + username +
-                    " <a href=\"test.php\" onClick=\"ChangeName();history.go(-1)\">Logout</a> ");
-                setCookie("username", username, now);
-            } else {
-                document.write("<a href=\"test.php\" onClick=\"ChangeName();history.go(-1)\">Sign up</a>");
-            }
+                username = document.getElementById('name');
                 
+            } */
+            setCookie("username", username, now);
+            if (username) {
+                document.write("Welcome, " + username +
+                    " <a href=\"cookie6.htm\" onClick=\"ChangeName();history.go(-1)\">Logout</a> ");
+                setCookie("username", username, now);
+            } else
+                document.write("<a href=\"test.html\" onClick=\"ChangeName();history.go(-1)\">Sign up</a>");
         }
 
-      function ChangeName(username) {
+        function ChangeName() {
+            var username = GetCookie("username");
+            username = prompt("Please enter your name:", "");
             //username = document.getElementById('name').value;
             setCookie("username", username);
             var visits = '';
             setCookie("counter", visits);
+            NewName()
         }
-        
     </script>
 
 </head>
 
-<?php
- if (isset($_GET['name'])){
-    $json_data = json_encode($_GET);
-   // var_dump($json_data);
-    $file = file_put_contents('data.json', $json_data."," , FILE_APPEND | LOCK_EX);
-
-?>
-    <script type="text/javascript">
-        ChangeName(<?php echo("'".$_GET['name']."'") ?>);
-    </script>
-<?php } ?>
 <body>
     <header>
         <div class="navlogo">
@@ -154,11 +139,12 @@
                     <div id="myDropdown" class="dropdown-content">
                         <div class="navigationsmall">
                             <div class="box">
-                                <a href='index.html'>Home</a>
-                                <a href="final_project/whatisbmx.html">What is BMX?</a>
-                                <a href="final_project/getstarted.html">Get Started</a>
-                                <a href="final_project/nearbyparks.html">Nearby Parks</a>
-                                <a href="final_project/famousriders.html">Famous Riders</a><a href="final_project/myhistory.html"> My History</a>
+                                <a href='../index.html'>Home</a>
+                                <a href="whatisbmx.html">What is BMX?</a>
+                                <a href="getstarted.html">Get Started</a>
+                                <a href="nearbyparks.html">Nearby Parks</a>
+                                <a href="famousriders.html">Famous Riders</a>
+                                <a href="myhistory.html"> My History</a>
                             </div>
                         </div>
                     </div>
@@ -166,12 +152,12 @@
 
                 <div class="navigationlarge">
                     <div class="box">
-                        <div class="drop"><a href='index.html'>Home</a></div>
-                        <div class="drop"><a href='final_project/whatisbmx.html'>What is BMX</a></div>
-                        <div class="drop"><a href="final_project/getstarted.html">Get Started</a></div>
-                        <div class="drop"><a href="final_project/nearbyparks.html">Nearby Parks</a></div>
-                        <div class="drop"><a href="final_project/famousriders.html">Famous Riders</a></div>
-                        <div class="drop"><a href="final_project/myhistory.html">My History</a></div>
+                        <div class="drop"><a href='../index.html'>Home</a></div>
+                        <div class="drop"><a href='whatisbmx.html'>What is BMX</a></div>
+                        <div class="drop"><a href="getstarted.html">Get Started</a></div>
+                        <div class="drop"><a href="nearbyparks.html">Nearby Parks</a></div>
+                        <div class="drop"><a href="famousriders.html">Famous Riders</a></div>
+                        <div class="drop"><a href="myhistory.html">My History</a></div>
                     </div>
                 </div>
             </nav>
@@ -190,67 +176,39 @@
         </div>
     </header>
     <main>
-
-        <form id="myform" type="post" class="form">
-            <fieldset>
-                <legend>Sign Up</legend>
-                <p>Please sign up for our website here!</p>
-                <div>
-                    <input required="required" type="text" placeholder="First name" name="name" size="25" class="inputBox" />
-                </div>
-                <div>
-                    <input required="required" type="text" placeholder="Username" name="username" size="25" class="inputBox" />
-                </div>
-                <div>
-                    <input required="required" type="text" placeholder="Email Address" name="email" size="25" class="inputBox" />
-                </div>
-                <div>
-                    <input required="required" type="number" value="" id="age" name="age" size="3" placeholder="Age" class="inputBox" min="1" max="99"/>
-                </div>
-                <div class="genderBox">
-                    <label for="gender">Gender :</label>
-                    <input type="radio" name="gender" value="Male" checked="checked" id="r1"> Male
-                    <input type="radio" name="gender" value="Female" id="r2"> Female
-                </div>
-                <div>
-                    <input type="submit" name="submit" id="submit" value="Submit" class="submit" />
-                </div>
-            </fieldset>
-        </form>
-
-
-        <p id="names"></p>
-
-        <script>
-            var xmlhttp = new XMLHttpRequest();
-            xmlhttp.onreadystatechange = function() {
-                if (this.readyState == 4 && this.status == 200) {
-                    var myObj = JSON.parse(this.responseText);
-                    document.getElementById("names").innerHTML = myObj.name;
-                }
-            };
-            xmlhttp.open("GET", "data.json", true);
-            xmlhttp.send();
-        </script>
-
-
+        <div class="primary">
+            <h1> Get Started</h1>
+        </div>
+        <div class="primary">
+            <p>Getting started in BMX is rather easy. First of all, you can begin by watching a few videos online that showcase the sport, and see if it is something that truly does interest you. If you still are interested after doing that, I would recommend by getting a starter BMX bike off of <a href="https://www.danscomp.com/">DansComp</a>, <a href="https://craigslist.org/">Craigslist</a>, or something similar. <a href="https://www.youtube.com/watch?v=ZTQNtG0AvtI">This</a> video shows what to look for when trying to purchase a BMX bike, <a href="https://www.youtube.com/watch?v=ZTQNtG0AvtI">BMX Bike Buying Guide.</a> Just to give you an idea of what it should look like, here is what a good beginner BMX bike looks like, <a href="https://www.danscomp.com/products/102902/2018_Kink_Curb_Bike.html">2017 Kink Curb Bike</a>. </p>
+        </div>
+        <div class="primary">
+            <p>Now that you have a BMX bike you can take it to one of your nearby skateparks found using our 'Nearby Parks ' tool. I would recommend watching and getting to know some of the people at the park, and ask if they could teach you the basics. If that isn't really possible for you, I 'd recommend by watching some beginner videos on youtube- I'll link a few below.</p>
+        </div>
+        <div class="primary">
+            <a href="https://www.youtube.com/watch?v=danm2Kgxozo">BMX for Beginners - Getting started </a></div>
+        <div class="primary">
+            <a href="https://www.youtube.com/watch?v=d6TRILP6kaI">4 BMX Skills to Learn First</a></div>
+        <div class="primary">
+            <a href="https://www.youtube.com/watch?v=NZ1qeVe8-yM">BMX Basics - 7 Skatepark Skills</a></div>
+        <div class="primary">
+            <p> After honing those skills, just remember that the internet is one of the greatest sources of learning. But, like stated in the first video, to truly get better it takes time and practice. Without these you will remain stagnant, and wont ever get better.</p>
+        </div>
+        <div class="primary">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/VGmtMNkpNX4"  allowfullscreen></iframe>
+            <video width="560" controls>
+  <source src="https://www.youtube.com/embed/VGmtMNkpNX4" type="video/mp4">
+  Your browser does not support HTML5 video.
+</video>
+        </div>
     </main>
     <footer>
         <div class="footer">
             <a>&copy;2017 Kean Weithofer</a>
         </div>
-        <div class="footer">
-            <a href="/final_project/oldindex.html">Homework Page</a>
-        </div>
-        <div class="footer">
-            <script>
-                VisitCounter()
-            </script>
-        </div>
-
     </footer>
-
-
+    <script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
+    <script src="/javascript/pulls.js"></script>
 </body>
 
-    </html>
+</html>

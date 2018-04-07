@@ -108,10 +108,10 @@
 
             if (username != "undefined") {
                 document.write("" + username +
-                    " <a href=\"test.php\" onClick=\"ChangeName();history.go(-1)\">Logout</a> ");
+                    " <a href=..\"test.php\" onClick=\"ChangeName();history.go(-1)\">Logout</a> ");
                 setCookie("username", username, now);
             } else {
-                document.write("<a href=\"test.php\" onClick=\"ChangeName();history.go(-1)\">Sign up</a>");
+                document.write("<a href=..\"test.php\" onClick=\"ChangeName();history.go(-1)\">Sign up</a>");
             }
 
         }
@@ -122,109 +122,107 @@
             var visits = '';
             setCookie("counter", visits);
         }
-        
+
         var xmlhttp = new XMLHttpRequest();
-                xmlhttp.onreadystatechange = function() {
-                    if (this.readyState == 4 && this.status == 200) {
-                        var myObj = JSON.parse(this.responseText);
-                        document.getElementById("names").innerHTML = myObj.name;
-                    }
-                };
-                xmlhttp.open("GET", "data.json", true);
-                xmlhttp.send();
+        xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                var myObj = JSON.parse(this.responseText);
+                document.getElementById("names").innerHTML = myObj.name;
+            }
+        };
+        xmlhttp.open("GET", "data.json", true);
+        xmlhttp.send();
 
     </script>
 
-</head>
-
-<?php
+    <?php
  if (isset($_GET['name'])){
     $json_data = json_encode($_GET);
    // var_dump($json_data);
     $file = file_put_contents('data.json', $json_data."," , FILE_APPEND | LOCK_EX);
 
 ?>
-    <script type="text/javascript">
-        ChangeName(<?php echo("'".$_GET['name']."'") ?>);
+        <script type="text/javascript">
+            ChangeName(<?php echo("'".$_GET['name']."'") ?>);
 
-    </script>
-    <?php } ?>
+        </script>
+        <?php } ?>
 
-    </head>
+</head>
 
-    <body>
-        <header>
-            <div class="navlogo">
-                <nav class="nav">
-                    <div class="dropdown">
-                        <button class="dropbtn" onclick="myFunction(this)">
+<body>
+    <header>
+        <div class="navlogo">
+            <nav class="nav">
+                <div class="dropdown">
+                    <button class="dropbtn" onclick="myFunction(this)">
                         <div class="bar1"></div>
                         <div class="bar2"></div>
                         <div class="bar3"></div>
                     
                     </button>
-                        <div id="myDropdown" class="dropdown-content">
-                            <div class="navigationsmall">
-                                <div class="box">
-                                    <a href='index.php' class="navbutton">Home</a>
-                                    <a href="final_project/whatisbmx.php" class="navbutton">What is BMX?</a>
-                                    <a href="final_project/getstarted.php" class="navbutton">Get Started</a>
-                                    <a href="final_project/nearbyparks.php" class="navbutton">Nearby Parks</a>
-                                    <a href="final_project/famousriders.php" class="navbutton">Famous Riders</a>
-                                    <a href="final_project/myhistory.php" class="navbutton"> My History</a>
-                                </div>
+                    <div id="myDropdown" class="dropdown-content">
+                        <div class="navigationsmall">
+                            <div class="box">
+                                <a href='index.php' class="navbutton">Home</a>
+                                <a href="final_project/whatisbmx.php" class="navbutton">What is BMX?</a>
+                                <a href="final_project/getstarted.php" class="navbutton">Get Started</a>
+                                <a href="final_project/nearbyparks.php" class="navbutton">Nearby Parks</a>
+                                <a href="final_project/famousriders.php" class="navbutton">Famous Riders</a>
+                                <a href="final_project/myhistory.php" class="navbutton"> My History</a>
                             </div>
                         </div>
                     </div>
-
-                    <div class="navigationlarge">
-                        <div class="box">
-                            <div class="drop"><a href='index.php' class="navbutton">Home</a></div>
-                            <div class="drop"><a href='final_project/whatisbmx.php' class="navbutton">What is BMX</a></div>
-                            <div class="drop"><a href="final_project/getstarted.php" class="navbutton">Get Started</a></div>
-                            <div class="drop"><a href="final_project/nearbyparks.php" class="navbutton">Nearby Parks</a></div>
-                            <div class="drop"><a href="final_project/famousriders.php" class="navbutton">Famous Riders</a></div>
-                            <div class="drop"><a href="final_project/myhistory.php" class="navbutton">My History</a></div>
-                        </div>
-                    </div>
-                </nav>
-                <div class="logoholder">
-                    <h1 class="logo"> BMX Essentials</h1>
                 </div>
-                <div class="counterholder">
-                    <div class="counter">
-                        <p>
-                            <script type="text/javascript">
-                                NewName()
 
-                            </script>
-                        </p>
+                <div class="navigationlarge">
+                    <div class="box">
+                        <div class="drop"><a href='index.php' class="navbutton">Home</a></div>
+                        <div class="drop"><a href='final_project/whatisbmx.php' class="navbutton">What is BMX</a></div>
+                        <div class="drop"><a href="final_project/getstarted.php" class="navbutton">Get Started</a></div>
+                        <div class="drop"><a href="final_project/nearbyparks.php" class="navbutton">Nearby Parks</a></div>
+                        <div class="drop"><a href="final_project/famousriders.php" class="navbutton">Famous Riders</a></div>
+                        <div class="drop"><a href="final_project/myhistory.php" class="navbutton">My History</a></div>
                     </div>
                 </div>
+            </nav>
+            <div class="logoholder">
+                <h1 class="logo"> BMX Essentials</h1>
             </div>
-        </header>
-        <main>
-            <div class="primary">
-                <h1> What is BMX?</h1>
+            <div class="counterholder">
+                <div class="counter">
+                    <p>
+                        <script type="text/javascript">
+                            NewName()
+
+                        </script>
+                    </p>
+                </div>
             </div>
-            <div class="primary">
-                <p class="grow">BMX is an abbreviation for bicycle motocross, and is a sport performed on BMX bikes, which are generally smaller in size to allow for quick, jerking movements on dirt courses, skateparks, or street settings. It began when young riders created dirt courses to perform tricks on. BMX began in the early 70's when children would ride their bikes on dirt courses, immitating the similar motorsport 'motocross.' Eventually manufacturers began creating smaller, lighter and more maneuverable bikes than the average road bike.</p>
-            </div>
-            <div class="primary">
-                <p class="grow"> Freestyle BMX is now one of the main events at the annual Summer X Games competition. The popularity of the sport has increased due to its relative ease and availability of places to ride due to the growing amount of skateparks in the nation. There are other events, not including the X Games, such as the Mountain Dew Tour and Etnies Backyard Jam.</p>
-            </div>
-        </main>
-        <footer>
-            <div class="footer">
-                <a>&copy;2017 Kean Weithofer</a>
-            </div>
-            <div class="footer">
-                <a href="/final_project/oldindex.html">Homework Page</a>
-            </div>
-            <div class="footer">
-                <a href="../weather/project-proposal-page.html">Planning Page</a>
-            </div>
-        </footer>
-    </body>
+        </div>
+    </header>
+    <main>
+        <div class="primary">
+            <h1> What is BMX?</h1>
+        </div>
+        <div class="primary">
+            <p class="grow">BMX is an abbreviation for bicycle motocross, and is a sport performed on BMX bikes, which are generally smaller in size to allow for quick, jerking movements on dirt courses, skateparks, or street settings. It began when young riders created dirt courses to perform tricks on. BMX began in the early 70's when children would ride their bikes on dirt courses, immitating the similar motorsport 'motocross.' Eventually manufacturers began creating smaller, lighter and more maneuverable bikes than the average road bike.</p>
+        </div>
+        <div class="primary">
+            <p class="grow"> Freestyle BMX is now one of the main events at the annual Summer X Games competition. The popularity of the sport has increased due to its relative ease and availability of places to ride due to the growing amount of skateparks in the nation. There are other events, not including the X Games, such as the Mountain Dew Tour and Etnies Backyard Jam.</p>
+        </div>
+    </main>
+    <footer>
+        <div class="footer">
+            <a>&copy;2017 Kean Weithofer</a>
+        </div>
+        <div class="footer">
+            <a href="/final_project/oldindex.html">Homework Page</a>
+        </div>
+        <div class="footer">
+            <a href="../weather/project-proposal-page.html">Planning Page</a>
+        </div>
+    </footer>
+</body>
 
 </html>

@@ -6,8 +6,8 @@
     <title>BMX Essentials Home | CIT 230 | KeanWVegas.github.io</title>
     <meta name="BMX Essentials" content="Page dedicated to informing users about the sport of BMX.">
     <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" type="text/css" href="/final_project/bmx.css">
-    <script>
+    <link rel="stylesheet" type="text/css" href="bmx.css">
+   <script>
         function myFunction(thiselement) {
             document.getElementById("myDropdown").classList.toggle("show");
             for (var i = 0; i < thiselement.children.length; i++) {
@@ -96,105 +96,69 @@
             var now = new Date();
             now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
             var username = GetCookie("username");
-            if ((!username) || (username == 'null')) {
-                username = prompt("Please enter your name:", "");
-            }
-            /*if ((!username) || (username == 'null')) {
-                username = document.getElementById('name');
-                
-            } */
+
+            /* if ((!username) || (username == 'null')) {
+                 username = prompt("Please enter your name:", "");
+             }
+             /*if ((!username) || (username == 'null')) {
+                 username = document.getElementById('name');   
+             } */
+
             setCookie("username", username, now);
-            if (username) {
-                document.write("Welcome, " + username +
-                    " <a href=\"cookie6.htm\" onClick=\"ChangeName();history.go(-1)\">Logout</a> ");
+
+            if (username != "undefined") {
+                document.write("" + username +
+                    " <a href=..\"test.php\" onClick=\"ChangeName();history.go(-1)\">Logout</a> ");
                 setCookie("username", username, now);
-            } else
-                document.write("<a href=\"test.html\" onClick=\"ChangeName();history.go(-1)\">Sign up</a>");
+            } else {
+                document.write("<a href=..\"test.php\" onClick=\"ChangeName();history.go(-1)\">Sign up</a>");
+            }
+
         }
 
-        function ChangeName() {
-            var username = GetCookie("username");
-            username = prompt("Please enter your name:", "");
+        function ChangeName(username) {
             //username = document.getElementById('name').value;
             setCookie("username", username);
             var visits = '';
             setCookie("counter", visits);
-            NewName()
         }
+
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                var myObj = JSON.parse(this.responseText);
+                document.getElementById("names").innerHTML = myObj.name;
+            }
+        };
+        xmlhttp.open("GET", "data.json", true);
+        xmlhttp.send();
+
     </script>
+
+    <?php
+ if (isset($_GET['name'])){
+    $json_data = json_encode($_GET);
+   // var_dump($json_data);
+    $file = file_put_contents('data.json', $json_data."," , FILE_APPEND | LOCK_EX);
+
+?>
+        <script type="text/javascript">
+            ChangeName(<?php echo("'".$_GET['name']."'") ?>);
+
+        </script>
+        <?php } ?>
 
 </head>
 
-<body>
-    <header>
-        <div class="navlogo">
-            <nav class="nav">
-                <div class="dropdown">
-                    <button class="dropbtn" onclick="myFunction(this)">
-                        <div class="bar1"></div>
-                        <div class="bar2"></div>
-                        <div class="bar3"></div>
-                    
-                    </button>
-                    <div id="myDropdown" class="dropdown-content">
-                        <div class="navigationsmall">
-                            <div class="box">
-                                <a href='index.html' class="navbutton">Home</a>
-                                <a href="final_project/whatisbmx.html" class="navbutton">What is BMX?</a>
-                                <a href="final_project/getstarted.html" class="navbutton">Get Started</a>
-                                <a href="final_project/nearbyparks.html" class="navbutton">Nearby Parks</a>
-                                <a href="final_project/famousriders.html" class="navbutton">Famous Riders</a>
-                                <a href="final_project/myhistory.html" class="navbutton"> My History</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="navigationlarge">
-                    <div class="box">
-                        <div class="drop"><a href='index.html' class="navbutton">Home</a></div>
-                        <div class="drop"><a href='final_project/whatisbmx.html' class="navbutton">What is BMX</a></div>
-                        <div class="drop"><a href="final_project/getstarted.html" class="navbutton">Get Started</a></div>
-                        <div class="drop"><a href="final_project/nearbyparks.html" class="navbutton">Nearby Parks</a></div>
-                        <div class="drop"><a href="final_project/famousriders.html" class="navbutton">Famous Riders</a></div>
-                        <div class="drop"><a href="final_project/myhistory.html" class="navbutton">My History</a></div>
-                    </div>
-                </div>
-            </nav>
-            <div class="logoholder">
-                <h1 class="logo"> BMX Essentials</h1>
-            </div>
-            <div class="counterholder">
-                <div class="counter">
-                    <p>
-                        <script type="text/javascript">
-                            NewName()
-                        </script>
-                    </p>
-                </div>
-            </div>
-        </div>
-    </header>
     <main>
+        <div class="primary">
+            <h1> News</h1>
+        </div>
+        <div class="primary">
+            <p> Here is where my news section would go.
+            </p>
+        </div>
 
-        <div class="primary">
-
-        </div>
-        <div class="primary">
-            <h1>BMX Advice</h1>
-        </div>
-        <div class="primary">
-            <h2>Learn about Bicycle Moto-Cross</h2>
-        </div>
-        <div class="primary">
-            <p>Learn what bmx is, how to get started, and skateparks near you.</p>
-        </div>
-        <div class="primary">
-            <p> Here's a quick clip of the 2014 Red Bull Dreamline, showcasing a few famous riders, including Ryan Nyquist and Morgan Wade!</p>
-        </div>
-        <div class="primary">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/t43CcBw1nWw" allowfullscreen></iframe>
-        </div>
     </main>
     <footer>
         <div class="footer">
