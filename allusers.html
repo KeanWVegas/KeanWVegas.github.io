@@ -3,10 +3,10 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>BMX Essentials Home | CIT 230 | KeanWVegas.github.io</title>
+    <title>BMX Essentials</title>
     <meta name="BMX Essentials" content="Page dedicated to informing users about the sport of BMX.">
     <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" type="text/css" href="/final_project/bmx.css">
+    <link rel="stylesheet" type="text/css" href="/bmx.css">
     <script>
         window.onclick = function(event) {
             if (!event.target.matches('.dropbtn')) {
@@ -117,10 +117,15 @@
 
     </script>
     <?php
+
+
+  
  if (isset($_GET['name'])){
-    $json_data = json_encode($_GET);
+      $temp_data = json_decode(file_get_contents('data.json'));
+    array_push($temp_data, $_GET);
    // var_dump($json_data);
-    $file = file_put_contents('data.json', $json_data."," , FILE_APPEND | LOCK_EX);
+    $json_data = json_encode($temp_data);
+    $file = file_put_contents('data.json', $json_data);
 
 ?>
         <script type="text/javascript">
@@ -128,33 +133,7 @@
 
         </script>
         <?php } ?>
-        <script>
-            function readTextFile(file, callback) {
-                var rawFile = new XMLHttpRequest();
-                rawFile.overrideMimeType("application/json");
-                rawFile.open("GET", file, true);
-                rawFile.onreadystatechange = function() {
-                    if (rawFile.readyState === 4 && rawFile.status == "200") {
-                        callback(rawFile.responseText);
-                    }
-                }
-                rawFile.send(null);
-            }
 
-            readTextFile("/data.json", function(text) {
-                var jsonData = JSON.parse(text);
-                console.log(data);
-                var table = document.getElementById("myTable");
-                for (var i = 0; i < jsonData.length; i++) {
-                    var user = jsonData[i];
-                    var row = table.insertRow(i);
-                    var cell1 = row.insertCell(0);
-                    cell1.innerHTML = user.username;
-                }
-
-            });
-
-        </script>
 </head>
 
 <body>
@@ -169,23 +148,12 @@
                     
                     </button>
                 <div id="sidenav" class="sidenav">
-                    <a href="javascript:void(0)" class="closebtn" onclick="openNav()">&times;</a>
-                    <a href='#home' class="navbutton" onclick="openNav()">Home</a>
-                    <a href="#whatisbmx" class="navbutton" onclick="openNav()">What is BMX?</a>
-                    <a href="#getstarted" class="navbutton" onclick="openNav()">Get Started</a>
-                    <a href="#nearbyparks" class="navbutton" onclick="openNav()">Nearby Parks</a>
-                    <a href="#news" class="navbutton" onclick="openNav()">News</a>
-                    <a href="#" class="navbutton" id="signUpNav" onclick="OpenModal()">Sign Up</a>
+                    <a href='index.php' class="navbutton" onclick="openNav()">Home</a>
                 </div>
 
                 <div class="navigationlarge">
                     <div class="box">
-                        <div class="drop"><a href='#home' class="navbutton">Home</a></div>
-                        <div class="drop"><a href='#whatisbmx' class="navbutton">What is BMX</a></div>
-                        <div class="drop"><a href="#getstarted" class="navbutton">Get Started</a></div>
-                        <div class="drop"><a href="#nearbyparks" class="navbutton">Nearby Parks</a></div>
-                        <div class="drop"><a href="#news" class="navbutton">News</a></div>
-                        <div class="drop"><a href="" class="navbutton">Sign Up</a></div>
+                        <div class="drop"><a href='index.php' class="navbutton">Home</a></div>
                     </div>
                 </div>
             </nav>
@@ -219,13 +187,48 @@
             xmlhttp.send();
 
         </script>
-
+        <div class="primary">
+            <h1>Registered Users</h1>
+        </div>
+        <div class="primary">
+            <p> All Registered BMX Essentials Users</p>
+        </div>
+        <div class="primary">
         <table id="myTable" border="1">
             <tr>
-                <td>username</td>
+                <td>All Users</td>
             </tr>
         </table>
+        </div>
+        <script>
+            function addToTable(text) {
+                var jsonData = JSON.parse(text);
+                console.log(text);
+                var table = document.getElementById("myTable");
+                for (var i = 0; i < jsonData.length; i++) {
+                    var user = jsonData[i];
+                    var row = table.insertRow(i + 1);
+                    var cell1 = row.insertCell(0);
+                    cell1.innerHTML = user.username;
+                }
+            }
 
+            function readTextFile(file, callback) {
+                var rawFile = new XMLHttpRequest();
+                rawFile.overrideMimeType("application/json");
+                rawFile.open("GET", file, true);
+                rawFile.onreadystatechange = function() {
+                    if (rawFile.readyState === 4 && rawFile.status == "200") {
+                        callback(rawFile.responseText);
+                    }
+                }
+                rawFile.send(null);
+            }
+            readTextFile("/data.json", function(text) {
+                addToTable(text);
+            });
+
+        </script>
         <div class="modalBox" id="modalBox">
             <form id="myform" type="post" class="form">
                 <fieldset>
@@ -252,15 +255,9 @@
                         <input type="submit" name="submit" id="submit" value="Submit" class="submit" />
                         <button type="button" class="submit" onclick="CloseModal()">Cancel</button>
                     </div>
-
                 </fieldset>
-
             </form>
-
         </div>
-
-        <p id="names"></p>
-
         <script>
             var xmlhttp = new XMLHttpRequest();
             xmlhttp.onreadystatechange = function() {
@@ -318,12 +315,6 @@
     <footer>
         <div class="footer">
             <a>&copy;2017 Kean Weithofer</a>
-        </div>
-        <div class="footer">
-            <a href="/final_project/oldindex.html">Homework Page</a>
-        </div>
-        <div class="footer">
-            <a href="../weather/project-proposal-page.html">Planning Page</a>
         </div>
     </footer>
 </body>

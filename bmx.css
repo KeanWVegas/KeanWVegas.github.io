@@ -149,6 +149,7 @@
         width: 90%;
         background: white;
         margin: auto;
+        outline: none;
     }
     .primary h1 {
         text-align: center;
@@ -272,11 +273,31 @@
     }
     html {
         height: 100%;
+
     }
     body {
         min-height: 100%;
         margin: 0;
         padding: 0;
+    }
+    #myTable {
+        border-collapse: collapse;
+        width: 100%;
+    }
+    #myTable td,
+    #myTable th {
+        border: 1px solid #ddd;
+        padding: 8px;
+    }
+    #myTable tr {
+        background-color: #f2f2f2;
+    }
+    #myTable th {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: left;
+        background-color: #4CAF50;
+        color: white;
     }
     footer {
         display: flex;
@@ -309,6 +330,10 @@
         background-color: rgba(0,0,0,0.4); 
 
     }
+    body.modal-open {
+    overflow: hidden;
+    position: fixed;
+    }
     .sidenav {
         height: 100%;
         width: 0;
@@ -319,7 +344,7 @@
         background-color: whitesmoke;
         overflow-x: hidden;
         transition: 0.5s;
-            margin-top: 43px;
+        margin-top: 43px;
     }
 
     .sidenav a {
@@ -592,8 +617,26 @@
     background-color: white;
     padding: 12px 20px 15px 10px;
     }
+    #myTable {
+        border-collapse: collapse;
+        width: 100%;
+    }
+    #myTable td,
+    #myTable th {
+        border: 1px solid #ddd;
+        padding: 8px;
+    }
+    #myTable th {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: left;
+        background-color: #4CAF50;
+        color: white;
+    }
+    #myTable tr {
+        background-color: #f2f2f2;
+    }
     .map {
-        .map {
         display: flex;
         justify-content: center;
         height: 100%;

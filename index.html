@@ -116,11 +116,16 @@
         }
 
     </script>
-    <?php
+<?php
+
+
+  
  if (isset($_GET['name'])){
-    $json_data = json_encode($_GET);
+      $temp_data = json_decode(file_get_contents('data.json'));
+    array_push($temp_data, $_GET);
    // var_dump($json_data);
-    $file = file_put_contents('data.json', $json_data."," , FILE_APPEND | LOCK_EX);
+    $json_data = json_encode($temp_data);
+    $file = file_put_contents('data.json', $json_data);
 
 ?>
         <script type="text/javascript">
@@ -128,6 +133,8 @@
 
         </script>
         <?php } ?>
+
+
 
 </head>
 
